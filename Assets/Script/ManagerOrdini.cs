@@ -19,7 +19,6 @@ public class ManagerOrdini : MonoBehaviour
 
     public List<ComponenteOrdine> ordini = new List<ComponenteOrdine>();
     public TextMeshProUGUI ordineText;
-    private int ordineCorrente = 0;
 
     public string[] tipiPossibili = { "Pane", "Latte", "Carne", "Frutta", "Verdura" };
     public int minQuantita = 1;
@@ -36,31 +35,27 @@ public class ManagerOrdini : MonoBehaviour
         int quantita = Random.Range(minQuantita, maxQuantita + 1);
 
         ordini.Add(new ComponenteOrdine(tipo, quantita));
-        ordineCorrente = ordini.Count - 1;
         AggiornaTestoOrdine();
     }
 
-    public bool ControllaOrdine(string tipo, int quantita)
+    public void CompletaOrdine()
     {
-        if (ordini.Count > 0 && ordini[ordineCorrente].tipo == tipo && ordini[ordineCorrente].quantita == quantita)
+        if (ordini.Count > 0)
         {
-            ordini.RemoveAt(ordineCorrente);
-            ordineCorrente = Mathf.Clamp(ordineCorrente, 0, ordini.Count - 1);
-            
+            ordini.RemoveAt(0); // Rimuove il primo ordine
+            AggiornaTestoOrdine();
+
             if (ordini.Count == 0)
-                ordineText.text = "Nessun ordine disponibile";
-            else
-                GeneraNuovoOrdine();
-            
-            return true;
+            {
+                GeneraNuovoOrdine(); // Genera un nuovo ordine solo se la lista è vuota
+            }
         }
-        return false;
     }
 
     private void AggiornaTestoOrdine()
     {
         if (ordini.Count > 0)
-            ordineText.text = $"Tipo: {ordini[ordineCorrente].tipo}\nQuantità: {ordini[ordineCorrente].quantita}";
+            ordineText.text = $"Tipo: {ordini[0].tipo}\nQuantità: {ordini[0].quantita}";
         else
             ordineText.text = "Nessun ordine disponibile";
     }
