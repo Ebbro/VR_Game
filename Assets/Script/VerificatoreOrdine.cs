@@ -11,10 +11,10 @@ public class VerificatoreOrdine : MonoBehaviour
 }
 
     private void OnTriggerStay(Collider other)
-    {
-        ComponenteOggetto oggetto = other.GetComponent<ComponenteOggetto>();
+{
+    ComponenteOggetto oggetto = other.GetComponentInChildren<ComponenteOggetto>();
 
-          if (oggetto == null)
+    if (oggetto == null)
     {
         Debug.LogError($"Errore: L'oggetto {other.name} non ha il componente ComponenteOggetto!");
         return;
@@ -22,19 +22,10 @@ public class VerificatoreOrdine : MonoBehaviour
 
     Debug.Log($"Tipo: {oggetto.tipo}, Quantità: {oggetto.quantita}");
 
-        if (oggetto != null)
-        {
-            int punti;
-            if (managerOrdini.OrdineCorrenteValido(oggetto.tipo, oggetto.quantita, out punti))
-            {
-                Debug.Log($"Ordine completato: {oggetto.tipo} x{oggetto.quantita}. Punti guadagnati: {punti}");
-                managerOrdini.CompletaOrdine(punti);
-                Destroy(other.gameObject); // Elimina l'oggetto verificato
-            }
-            else
-            {
-                Debug.Log("Oggetto non valido per l'ordine.");
-            }
-        }
-    }
+    int punti;
+    // Ora il metodo restituisce sempre true
+    managerOrdini.OrdineCorrenteValido(oggetto.tipo, oggetto.quantita, out punti);
+    managerOrdini.CompletaOrdine(punti);
+    Destroy(other.gameObject);
+}
 }

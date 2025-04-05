@@ -21,9 +21,9 @@ public class ManagerOrdini : MonoBehaviour
     public TextMeshProUGUI ordineText;
     public TextMeshProUGUI punteggioText; // Testo per visualizzare il punteggio
 
-    public string[] tipiPossibili = { "Pane", "Latte", "Carne", "Frutta", "Verdura" };
+    public string[] tipiPossibili = { "Orsacchiotto", "Polpo", "", ""};
     public int minQuantita = 1;
-    public int maxQuantita = 10;
+    public int maxQuantita = 2;
 
     private int punteggio = 0; // Punteggio totale del giocatore
 
@@ -56,7 +56,7 @@ public class ManagerOrdini : MonoBehaviour
 
             return tipoCorretto || quantitaCorretta;
         }
-        return false;
+        return true;
     }
 
     public void CompletaOrdine(int punti)
