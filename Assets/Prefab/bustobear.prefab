@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.0013163239
       objectReference: {fileID: 0}
+    - target: {fileID: -1806680513116206669, guid: 683b87e500324a741a45515edb634682, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f80d109198bada448c31035c8bfebb7, type: 2}
+    - target: {fileID: -1120989108687609925, guid: 683b87e500324a741a45515edb634682, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f80d109198bada448c31035c8bfebb7, type: 2}
     - target: {fileID: 919132149155446097, guid: 683b87e500324a741a45515edb634682, type: 3}
       propertyPath: m_Name
       value: bustobear
