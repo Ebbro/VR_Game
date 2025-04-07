@@ -8,6 +8,7 @@ TagManager:
   - Toy
   - ToyBase
   - AttachPoint
+  - InteractionManager
   layers:
   - Default
   - TransparentFX
