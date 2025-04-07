@@ -8,15 +8,30 @@ public class ToyCannon : MonoBehaviour
 
     [SerializeField] private float Interval = 5.0f;
     [SerializeField] private float time = 0.0f;
+    [SerializeField] private bool active = true;
 
-
-
-    [SerializeField] public GameObject SpawnablePiece;
-    [SerializeField] public List<GameObject> ToyPieces = new List<GameObject>();
     [SerializeField] public float Force = 100.0f;
-
+    [SerializeField] public List<GameObject> ToyPieces = new List<GameObject>();
     
 
+
+    private void SwitchActivate(){
+        if(active) active = false;
+        else active = true;
+        }
+    
+    private void UpdateTime()
+    {
+        if (active)
+        {
+            time += Time.deltaTime;
+            if (time > Interval)
+            {
+                time = 0;
+                ShootToyPiece();
+            }
+        }
+    }
 
     private void ShootToyPiece()
     {
@@ -45,11 +60,6 @@ public class ToyCannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        if (time > Interval)
-        {
-            time = 0;
-            ShootToyPiece();
-        }
+        UpdateTime();
     }
 }
