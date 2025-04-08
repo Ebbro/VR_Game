@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class ManagerOrdini : MonoBehaviour
@@ -19,7 +20,7 @@ public class ManagerOrdini : MonoBehaviour
 
     public List<ComponenteOrdine> ordini = new List<ComponenteOrdine>();
     public TextMeshProUGUI ordineText;
-    public TextMeshProUGUI punteggioText; // Testo per visualizzare il punteggio
+    public Text punteggioText; // Testo per visualizzare il punteggio
 
     public string[] tipiPossibili = { "Orsacchiotto", "Polpo", "", ""};
     public int minQuantita = 1;
@@ -48,13 +49,17 @@ public class ManagerOrdini : MonoBehaviour
 
         if (ordini.Count > 0)
         {
+            float tempoBonus = 0;
             bool tipoCorretto = ordini[0].tipo == tipo;
             bool quantitaCorretta = ordini[0].quantita == quantita;
 
             if (tipoCorretto) punti += 10;  // 10 punti per il tipo giusto
+            if (tipoCorretto) tempoBonus += 10; // ad esempio 10 secondi
+            if (quantitaCorretta) tempoBonus += 5;
             if (quantitaCorretta) punti += 5; // 5 punti per la quantità giusta
-
+        GameManager.Instance.AggiungiTempo(tempoBonus);
             return tipoCorretto || quantitaCorretta;
+            
         }
         return true;
     }

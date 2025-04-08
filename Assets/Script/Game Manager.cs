@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,14 +11,13 @@ public class GameManager : MonoBehaviour
     public bool isGameOver = false;
 
     [Header("UI")]
-    public TextMeshProUGUI timerText; // Riferimento al testo UI
+    public Text timerText; // <-- Usiamo Text normale qui
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject); // facoltativo
         }
         else
         {
@@ -54,6 +53,11 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
         Debug.Log("Game Over: Time's up!");
-        // Potresti disattivare il timer UI o mostrarne uno rosso, ecc.
     }
+    public void AggiungiTempo(float tempoDaAggiungere)
+{
+    elapsedTime -= tempoDaAggiungere;
+    if (elapsedTime < 0f)
+        elapsedTime = 0f;
+}
 }
