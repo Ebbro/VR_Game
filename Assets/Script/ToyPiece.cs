@@ -61,7 +61,7 @@ public class ToyPiece : MonoBehaviour
         {
             Pieces.Add(obj);
             NumberOfPieces++;
-
+    
             if(obj.GetComponent<ToyPiece>().PieceType != null)
             {
                 ToyTypes.Add(obj.GetComponent<ToyPiece>().PieceType);
