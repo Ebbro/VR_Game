@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1f80d109198bada448c31035c8bfebb7, type: 2}
     - target: {fileID: 919132149155446097, guid: 683b87e500324a741a45515edb634682, type: 3}
       propertyPath: m_Name
-      value: bustobear
+      value: TestBusto
       objectReference: {fileID: 0}
     - target: {fileID: 4306643203051859313, guid: 683b87e500324a741a45515edb634682, type: 3}
       propertyPath: m_LocalPosition.y
@@ -92,9 +92,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -208595431880416365, guid: 683b87e500324a741a45515edb634682, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6906139346343258212}
-    - targetCorrespondingSourceObject: {fileID: -208595431880416365, guid: 683b87e500324a741a45515edb634682, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 303702947084359160}
   m_SourcePrefab: {fileID: 100100000, guid: 683b87e500324a741a45515edb634682, type: 3}
 --- !u!1 &599842790677887985 stripped
 GameObject:
@@ -137,19 +134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipo: 
   quantita: 0
---- !u!114 &303702947084359160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599842790677887985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dca725c0c0bee04591d3112bc296a9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnBase: {fileID: 0}
 --- !u!1 &8757411695189402931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 683b87e500324a741a45515edb634682, type: 3}
