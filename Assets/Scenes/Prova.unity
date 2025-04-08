@@ -205,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: ToyPieces.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[0]'
@@ -222,15 +222,23 @@ PrefabInstance:
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[3]'
       value: 
-      objectReference: {fileID: 2553674038992205443, guid: 504c5bec4117d054e9504a03d9c66a9c, type: 3}
+      objectReference: {fileID: 1941040720968270050, guid: 53f86ab38949bf944a59f328a0238193, type: 3}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[4]'
       value: 
-      objectReference: {fileID: 3869099932762216188, guid: c60fa53e583c2b240a662998e9af5e53, type: 3}
+      objectReference: {fileID: 805158299544037989, guid: 16ab7d50c28c5ca4a91c5571fee76b2d, type: 3}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[5]'
       value: 
-      objectReference: {fileID: 439276799580295611, guid: 6213076a21f04d04296c597ed4871c4d, type: 3}
+      objectReference: {fileID: 124602762957757443, guid: f979ffff8ee1fa74c9a0e2d2f6ec17d3, type: 3}
+    - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
+      propertyPath: 'ToyPieces.Array.data[6]'
+      value: 
+      objectReference: {fileID: 5283808861355084553, guid: 35c4578a75751c4469b8cc04074bddfa, type: 3}
+    - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
+      propertyPath: 'ToyPieces.Array.data[7]'
+      value: 
+      objectReference: {fileID: 5425695909149451949, guid: 81c0cc01685cb0f4ea4e4a8719f223c0, type: 3}
     - target: {fileID: 4171701726009694650, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: m_Name
       value: ToyCannon (3)
@@ -341,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: ToyPieces.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[0]'
@@ -358,15 +366,23 @@ PrefabInstance:
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[3]'
       value: 
-      objectReference: {fileID: 2553674038992205443, guid: 504c5bec4117d054e9504a03d9c66a9c, type: 3}
+      objectReference: {fileID: 1941040720968270050, guid: 53f86ab38949bf944a59f328a0238193, type: 3}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[4]'
       value: 
-      objectReference: {fileID: 3869099932762216188, guid: c60fa53e583c2b240a662998e9af5e53, type: 3}
+      objectReference: {fileID: 805158299544037989, guid: 16ab7d50c28c5ca4a91c5571fee76b2d, type: 3}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[5]'
       value: 
-      objectReference: {fileID: 439276799580295611, guid: 6213076a21f04d04296c597ed4871c4d, type: 3}
+      objectReference: {fileID: 124602762957757443, guid: f979ffff8ee1fa74c9a0e2d2f6ec17d3, type: 3}
+    - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
+      propertyPath: 'ToyPieces.Array.data[6]'
+      value: 
+      objectReference: {fileID: 5283808861355084553, guid: 35c4578a75751c4469b8cc04074bddfa, type: 3}
+    - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
+      propertyPath: 'ToyPieces.Array.data[7]'
+      value: 
+      objectReference: {fileID: 5425695909149451949, guid: 81c0cc01685cb0f4ea4e4a8719f223c0, type: 3}
     - target: {fileID: 4171701726009694650, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: m_Name
       value: ToyCannon (2)
@@ -640,7 +656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: ToyPieces.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[0]'
@@ -657,15 +673,23 @@ PrefabInstance:
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[3]'
       value: 
-      objectReference: {fileID: 2553674038992205443, guid: 504c5bec4117d054e9504a03d9c66a9c, type: 3}
+      objectReference: {fileID: 1941040720968270050, guid: 53f86ab38949bf944a59f328a0238193, type: 3}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[4]'
       value: 
-      objectReference: {fileID: 3869099932762216188, guid: c60fa53e583c2b240a662998e9af5e53, type: 3}
+      objectReference: {fileID: 805158299544037989, guid: 16ab7d50c28c5ca4a91c5571fee76b2d, type: 3}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[5]'
       value: 
-      objectReference: {fileID: 439276799580295611, guid: 6213076a21f04d04296c597ed4871c4d, type: 3}
+      objectReference: {fileID: 124602762957757443, guid: f979ffff8ee1fa74c9a0e2d2f6ec17d3, type: 3}
+    - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
+      propertyPath: 'ToyPieces.Array.data[6]'
+      value: 
+      objectReference: {fileID: 5283808861355084553, guid: 35c4578a75751c4469b8cc04074bddfa, type: 3}
+    - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
+      propertyPath: 'ToyPieces.Array.data[7]'
+      value: 
+      objectReference: {fileID: 5425695909149451949, guid: 81c0cc01685cb0f4ea4e4a8719f223c0, type: 3}
     - target: {fileID: 4171701726009694650, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: m_Name
       value: ToyCannon (1)
@@ -1709,7 +1733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: ToyPieces.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[0]'
@@ -1726,15 +1750,23 @@ PrefabInstance:
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[3]'
       value: 
-      objectReference: {fileID: 2553674038992205443, guid: 504c5bec4117d054e9504a03d9c66a9c, type: 3}
+      objectReference: {fileID: 1941040720968270050, guid: 53f86ab38949bf944a59f328a0238193, type: 3}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[4]'
       value: 
-      objectReference: {fileID: 3869099932762216188, guid: c60fa53e583c2b240a662998e9af5e53, type: 3}
+      objectReference: {fileID: 805158299544037989, guid: 16ab7d50c28c5ca4a91c5571fee76b2d, type: 3}
     - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: 'ToyPieces.Array.data[5]'
       value: 
-      objectReference: {fileID: 439276799580295611, guid: 6213076a21f04d04296c597ed4871c4d, type: 3}
+      objectReference: {fileID: 124602762957757443, guid: f979ffff8ee1fa74c9a0e2d2f6ec17d3, type: 3}
+    - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
+      propertyPath: 'ToyPieces.Array.data[6]'
+      value: 
+      objectReference: {fileID: 5283808861355084553, guid: 35c4578a75751c4469b8cc04074bddfa, type: 3}
+    - target: {fileID: 1914469820001464487, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
+      propertyPath: 'ToyPieces.Array.data[7]'
+      value: 
+      objectReference: {fileID: 5425695909149451949, guid: 81c0cc01685cb0f4ea4e4a8719f223c0, type: 3}
     - target: {fileID: 4171701726009694650, guid: 2d645b7a203a5494cb2567e42e99f4e9, type: 3}
       propertyPath: m_Name
       value: ToyCannon
