@@ -9,6 +9,7 @@ TagManager:
   - ToyBase
   - AttachPoint
   - InteractionManager
+  - Attachable
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Toy
   - 
   m_SortingLayers:
   - name: Default
