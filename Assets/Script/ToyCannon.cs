@@ -38,7 +38,7 @@ public class ToyCannon : MonoBehaviour
         //Debug.Log("Toy piece Spawning");
         //GameObject Piece = Instantiate(SpawnablePiece, transform.GetChild(0)); //spawn specific piece
 
-        int RandomInt = Random.Range(0, ToyPieces.Count - 1);
+        int RandomInt = Random.Range(0, ToyPieces.Count);
 
         Debug.Log(string.Concat("Toy piece Spawning - ", RandomInt, " - "));
         GameObject Piece = Instantiate(ToyPieces[RandomInt], transform.GetChild(0));

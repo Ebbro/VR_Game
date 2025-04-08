@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: testabear
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 745d6d31a053260459b08f160a4e01ab, type: 3}
+      propertyPath: m_TagString
+      value: ToyPiece
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -85,6 +89,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 745d6d31a053260459b08f160a4e01ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7813526915801041858}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 745d6d31a053260459b08f160a4e01ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4623851914732444694}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 745d6d31a053260459b08f160a4e01ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 579705362748167026}
@@ -163,7 +170,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 33554433
+    m_Bits: 167772161
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -292,3 +299,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &-4623851914732444694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681494250148638227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NumberOfPieces: 1
+  Pieces: []
+  IsBase: 0
+  ToyTypes: []
+  PieceType: 
+  socket: []

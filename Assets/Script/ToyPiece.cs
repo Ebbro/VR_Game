@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using static UnityEngine.Rendering.GPUSort;
 
@@ -19,6 +20,10 @@ public class ToyPiece : MonoBehaviour
 
     [SerializeField] private List<XRSocketInteractor> socket = new List<XRSocketInteractor>();
 
+    [Tooltip("Interaction layer to assign to object when inserted into this socket.")]
+
+
+    InteractionLayerMask voidlayer = InteractionLayerMask.GetMask("ToyInSocket");
 
 
     private void Awake()
@@ -32,19 +37,37 @@ public class ToyPiece : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            socket.Add(transform.GetChild(i).GetComponent<XRSocketInteractor>());
-            socket[i] = transform.GetChild(i).GetComponent<XRSocketInteractor>();
-            socket[i].selectEntered.AddListener(OnObjectInserted);
-            socket[i].selectExited.AddListener(OnObjectRemoved);
+            if (IsBase)
+            {
+                socket.Add(transform.GetChild(i).GetComponent<XRSocketInteractor>());
+                if (transform.GetChild(i).GetComponent<XRSocketInteractor>() != null) socket[i] = transform.GetChild(i).GetComponent<XRSocketInteractor>();
+
+                if (socket[i] != null)
+                {
+                    socket[i].selectEntered.AddListener(OnObjectInserted);
+                    socket[i].selectExited.AddListener(OnObjectRemoved);
+                }
+                else Debug.Log(i + " socket is null");
+            }
         }
     }
     private void OnObjectInserted(SelectEnterEventArgs obj)
     {
-        Debug.Log("Object enetered socket");
-        GameObject piece = obj.interactableObject.transform.gameObject;
-        Debug.Log(piece.name);
-        AddPiaceToList(piece);
 
+        if (IsBase)
+        {
+            Debug.Log("Object enetered socket");
+            GameObject piece = obj.interactableObject.transform.gameObject;
+            Debug.Log(piece.name);
+            AddPieceToList(piece);
+            piece.GetComponent<ToyPiece>(). DeactivateGrabInteractor();
+        }
+    }
+
+    private void DeactivateGrabInteractor()
+    {
+        if (gameObject.GetComponent<XRGrabInteractable>().enabled != null) gameObject.GetComponent<XRGrabInteractable>().interactionLayers = voidlayer;
+        //if (gameObject.GetComponent<XRGrabInteractable>().enabled != null) gameObject.GetComponent<XRGrabInteractable>().enabled = false;
     }
 
     private void OnObjectRemoved(SelectExitEventArgs obj)
@@ -55,7 +78,7 @@ public class ToyPiece : MonoBehaviour
     }
 
 
-    private void AddPiaceToList(GameObject obj)
+    private void AddPieceToList(GameObject obj)
     {
         if (IsBase)
         {
