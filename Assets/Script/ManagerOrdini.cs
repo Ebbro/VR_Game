@@ -57,7 +57,7 @@ public class ManagerOrdini : MonoBehaviour
             if (tipoCorretto) tempoBonus += 10; // ad esempio 10 secondi
             if (quantitaCorretta) tempoBonus += 5;
             if (quantitaCorretta) punti += 5; // 5 punti per la quantità giusta
-            GameManager.Instance.AggiungiTempo(tempoBonus);
+        GameManager.Instance.AggiungiTempo(tempoBonus);
             return tipoCorretto || quantitaCorretta;
             
         }
