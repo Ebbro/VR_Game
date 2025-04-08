@@ -43,26 +43,26 @@ public class ManagerOrdini : MonoBehaviour
         AggiornaTestoOrdine();
     }
 
-    public bool OrdineCorrenteValido(string tipo, int quantita, out int punti)
+public bool OrdineCorrenteValido(string tipo, int quantita, out int punti)
+{
+    punti = 0;
+
+    if (ordini.Count == 0)
+        return false;
+
+    bool tipoCorretto = ordini[0].tipo == tipo;
+    bool quantitaCorretta = ordini[0].quantita == quantita;
+
+    if (tipoCorretto && quantitaCorretta)
     {
-        punti = 0;
-
-        if (ordini.Count > 0)
-        {
-            float tempoBonus = 0;
-            bool tipoCorretto = ordini[0].tipo == tipo;
-            bool quantitaCorretta = ordini[0].quantita == quantita;
-
-            if (tipoCorretto) punti += 10;  // 10 punti per il tipo giusto
-            if (tipoCorretto) tempoBonus += 10; // ad esempio 10 secondi
-            if (quantitaCorretta) tempoBonus += 5;
-            if (quantitaCorretta) punti += 5; // 5 punti per la quantità giusta
+        punti = 15; // 10 per tipo + 5 per quantità, ma assegnati solo se entrambi corretti
+        float tempoBonus = 15f; // 10 + 5 secondi
         GameManager.Instance.AggiungiTempo(tempoBonus);
-            return tipoCorretto || quantitaCorretta;
-            
-        }
         return true;
     }
+
+    return false;
+}
 
     public void CompletaOrdine(int punti)
     {

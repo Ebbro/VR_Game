@@ -14,12 +14,6 @@ public class VerificatoreOrdine : MonoBehaviour
 {
     ComponenteOggetto oggetto = other.GetComponentInChildren<ComponenteOggetto>();
 
-    if (oggetto == null)
-    {
-        Debug.LogError($"Errore: L'oggetto {other.name} non ha il componente ComponenteOggetto!");
-        return;
-    }
-
     Debug.Log($"Tipo: {oggetto.tipo}, Quantità: {oggetto.quantita}");
 
     int punti;
