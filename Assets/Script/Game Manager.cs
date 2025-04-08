@@ -1,13 +1,5 @@
-/*using System.Collections.Generic;
-/*using System.Collections.Generic;
 using UnityEngine;
-
-[System.Serializable]
-public class ObjectCheck
-{
-    public GameObject mainObject;
-    public List<GameObject> requiredSubObjects = new List<GameObject>();
-}
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,17 +7,18 @@ public class GameManager : MonoBehaviour
 
     [Header("Time Settings")]
     public float maxTime = 300f; // Maximum level time in seconds
-    private float elapsedTime = 0f;
-    private bool isGameOver = false;
+    public float elapsedTime = 0f;
+    public bool isGameOver = false;
 
-    [Header("Object Checking")]
-    public List<ObjectCheck> objectChecks = new List<ObjectCheck>(); // List of objects with required sub-objects
+    [Header("UI")]
+    public TextMeshProUGUI timerText; // Riferimento al testo UI
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            //DontDestroyOnLoad(gameObject); // facoltativo
         }
         else
         {
@@ -38,6 +31,10 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             elapsedTime += Time.deltaTime;
+
+            // Aggiorna il timer visivo
+            UpdateTimerUI();
+
             if (elapsedTime >= maxTime)
             {
                 EndGame();
@@ -45,44 +42,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void UpdateTimerUI()
+    {
+        float timeLeft = Mathf.Max(0f, maxTime - elapsedTime);
+        int minutes = Mathf.FloorToInt(timeLeft / 60f);
+        int seconds = Mathf.FloorToInt(timeLeft % 60f);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
     private void EndGame()
     {
         isGameOver = true;
         Debug.Log("Game Over: Time's up!");
-        // Implement additional game over logic here
-    }
-
-    public bool CheckObject(GameObject obj)
-    {
-        foreach (var check in objectChecks)
-        {
-            if (check.mainObject == obj)
-            {
-                List<GameObject> containedObjects = GetObjectList(obj);
-                if (containedObjects == null) return false;
-
-                foreach (GameObject requiredObj in check.requiredSubObjects)
-                {
-                    if (!containedObjects.Contains(requiredObj))
-                    {
-                        return false;
-                    }
-                }
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private List<GameObject> GetObjectList(GameObject obj)
-    {
-        ObjectContainer container = obj.GetComponent<ObjectContainer>();
-        return container != null ? container.objectsInside : null;
+        // Potresti disattivare il timer UI o mostrarne uno rosso, ecc.
     }
 }
-
-public class ObjectContainer : MonoBehaviour
-{
-    public List<GameObject> objectsInside = new List<GameObject>();
-}
-*/
