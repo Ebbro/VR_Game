@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 44040192
+    m_Bits: 10485760
   m_Handedness: 0
   m_AttachTransform: {fileID: 3839513501102466208}
   m_KeepSelectedTargetValid: 1
@@ -115,8 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: MergableState
-  negatedTagHover: ToyBase
+  acceptedTags: []
+  negatedTags: []
 --- !u!1 &1254106033265173397
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 44040192
+    m_Bits: 10485760
   m_Handedness: 0
   m_AttachTransform: {fileID: 7128275914827574818}
   m_KeepSelectedTargetValid: 1
@@ -232,8 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: MergableState
-  negatedTagHover: ToyBase
+  acceptedTags: []
+  negatedTags: []
 --- !u!1 &1547808169140098348
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,12 +512,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PieceType: 
+  IsBase: 1
   NumberOfPieces: 1
   Pieces: []
-  IsBase: 1
   ToyTypes: []
-  PieceType: 
-  socket: []
+  voidlayer:
+    m_Bits: 0
 --- !u!1 &1830837118975532033
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 44040192
+    m_Bits: 10485760
   m_Handedness: 0
   m_AttachTransform: {fileID: 5944685256307469985}
   m_KeepSelectedTargetValid: 1
@@ -633,8 +634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: MergableState
-  negatedTagHover: ToyBase
+  acceptedTags: []
+  negatedTags: []
 --- !u!1 &2118459614964788031
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 44040192
+    m_Bits: 10485760
   m_Handedness: 0
   m_AttachTransform: {fileID: 3288898466826021182}
   m_KeepSelectedTargetValid: 1
@@ -750,8 +751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: MergableState
-  negatedTagHover: ToyBase
+  acceptedTags: []
+  negatedTags: []
 --- !u!1 &5620100173908204882
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 44040192
+    m_Bits: 10485760
   m_Handedness: 0
   m_AttachTransform: {fileID: 2566335697222541661}
   m_KeepSelectedTargetValid: 1
@@ -867,8 +868,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: MergableState
-  negatedTagHover: ToyBase
+  acceptedTags: []
+  negatedTags: []
 --- !u!1 &5678208042845778537
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,7 +939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 44040192
+    m_Bits: 10485760
   m_Handedness: 0
   m_AttachTransform: {fileID: 3749040057107326867}
   m_KeepSelectedTargetValid: 1
@@ -984,5 +985,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: MergableState
-  negatedTagHover: ToyBase
+  acceptedTags:
+  - MergableStase
+  negatedTags:
+  - ToyBase
+  - ToyPiece
+  - ToyInSocket
