@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 176160768
+    m_Bits: 44040192
   m_Handedness: 0
   m_AttachTransform: {fileID: 3839513501102466208}
   m_KeepSelectedTargetValid: 1
@@ -89,9 +89,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 3580986705011253837}
+  - {fileID: 8499306666593602861}
   m_StartingSelectFilters:
-  - {fileID: 3580986705011253837}
+  - {fileID: 8499306666593602861}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: ToyPiece
+  acceptedTag: MergableState
   negatedTagHover: ToyBase
 --- !u!1 &1254106033265173397
 GameObject:
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 176160768
+    m_Bits: 44040192
   m_Handedness: 0
   m_AttachTransform: {fileID: 7128275914827574818}
   m_KeepSelectedTargetValid: 1
@@ -201,26 +201,14 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: AddToMerged
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 4918678685404666161}
+  - {fileID: 8499306666593602861}
   m_StartingSelectFilters:
-  - {fileID: 4918678685404666161}
+  - {fileID: 8499306666593602861}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -244,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: ToyPiece
+  acceptedTag: MergableState
   negatedTagHover: ToyBase
 --- !u!1 &1547808169140098348
 GameObject:
@@ -278,7 +266,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3749040057107326867}
@@ -405,7 +393,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 167772160
+    m_Bits: 134217728
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -599,7 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 176160768
+    m_Bits: 44040192
   m_Handedness: 0
   m_AttachTransform: {fileID: 5944685256307469985}
   m_KeepSelectedTargetValid: 1
@@ -619,9 +607,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 4025233582481719580}
+  - {fileID: 8499306666593602861}
   m_StartingSelectFilters:
-  - {fileID: 4025233582481719580}
+  - {fileID: 8499306666593602861}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -645,7 +633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: ToyPiece
+  acceptedTag: MergableState
   negatedTagHover: ToyBase
 --- !u!1 &2118459614964788031
 GameObject:
@@ -716,7 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 176160768
+    m_Bits: 44040192
   m_Handedness: 0
   m_AttachTransform: {fileID: 3288898466826021182}
   m_KeepSelectedTargetValid: 1
@@ -736,9 +724,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 6396621671608758064}
+  - {fileID: 8499306666593602861}
   m_StartingSelectFilters:
-  - {fileID: 6396621671608758064}
+  - {fileID: 8499306666593602861}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -762,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: ToyPiece
+  acceptedTag: MergableState
   negatedTagHover: ToyBase
 --- !u!1 &5620100173908204882
 GameObject:
@@ -833,7 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 176160768
+    m_Bits: 44040192
   m_Handedness: 0
   m_AttachTransform: {fileID: 2566335697222541661}
   m_KeepSelectedTargetValid: 1
@@ -853,9 +841,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 7529842650284368184}
+  - {fileID: 8499306666593602861}
   m_StartingSelectFilters:
-  - {fileID: 7529842650284368184}
+  - {fileID: 8499306666593602861}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -879,7 +867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: ToyPiece
+  acceptedTag: MergableState
   negatedTagHover: ToyBase
 --- !u!1 &5678208042845778537
 GameObject:
@@ -950,7 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_InteractionLayers:
-    m_Bits: 176160768
+    m_Bits: 44040192
   m_Handedness: 0
   m_AttachTransform: {fileID: 3749040057107326867}
   m_KeepSelectedTargetValid: 1
@@ -996,5 +984,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTag: ToyPiece
+  acceptedTag: MergableState
   negatedTagHover: ToyBase

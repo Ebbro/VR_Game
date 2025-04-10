@@ -9,21 +9,26 @@ using static UnityEngine.Rendering.GPUSort;
 
 public class ToyPiece : MonoBehaviour
 {
+    [SerializeField] private string PieceType = null;
+
+    [SerializeField] private bool IsBase = false;
 
     [SerializeField] public int NumberOfPieces = 1;
     [SerializeField] private List<GameObject> Pieces = new List<GameObject>();
 
-    [SerializeField] private bool IsBase=false;
+    
     [SerializeField] private List<string> ToyTypes = new List<string>();
 
-    [SerializeField] private string PieceType = null;
+    
 
-    [SerializeField] private List<XRSocketInteractor> socket = new List<XRSocketInteractor>();
+    private List<XRSocketInteractor> socket = new List<XRSocketInteractor>();
 
     [Tooltip("Interaction layer to assign to object when inserted into this socket.")]
 
 
-    InteractionLayerMask voidlayer = InteractionLayerMask.GetMask("ToyInSocket");
+    [SerializeField] InteractionLayerMask voidlayer = InteractionLayerMask.GetMask();
+
+
 
 
     private void Awake()
@@ -60,13 +65,13 @@ public class ToyPiece : MonoBehaviour
             GameObject piece = obj.interactableObject.transform.gameObject;
             Debug.Log(piece.name);
             AddPieceToList(piece);
-            piece.GetComponent<ToyPiece>(). DeactivateGrabInteractor();
+            piece.GetComponent<ToyPiece>().DeactivateGrabInteractor();
         }
     }
 
     private void DeactivateGrabInteractor()
     {
-        if (gameObject.GetComponent<XRGrabInteractable>().enabled != null) gameObject.GetComponent<XRGrabInteractable>().interactionLayers = voidlayer;
+        if (gameObject.GetComponent<XRGrabInteractable>() != null) gameObject.GetComponent<XRGrabInteractable>().interactionLayers = voidlayer;
         //if (gameObject.GetComponent<XRGrabInteractable>().enabled != null) gameObject.GetComponent<XRGrabInteractable>().enabled = false;
     }
 
@@ -78,27 +83,35 @@ public class ToyPiece : MonoBehaviour
     }
 
 
+
+
     private void AddPieceToList(GameObject obj)
     {
         if (IsBase)
         {
             Pieces.Add(obj);
             NumberOfPieces++;
-    
-            if(obj.GetComponent<ToyPiece>().PieceType != null)
-            {
-                ToyTypes.Add(obj.GetComponent<ToyPiece>().PieceType);
-            }
-            
+
+            AddTypeToList(obj);
+
+
+        }
+    }
+
+    private void AddTypeToList(GameObject obj)
+    {
+        if (obj.GetComponent<ToyPiece>().PieceType != null)
+        {
+            ToyTypes.Add(obj.GetComponent<ToyPiece>().PieceType);
         }
     }
 
     private void RemovePiaceToList(GameObject obj)
     {
-        for (int i = 0;i < Pieces.Count; i++)
+        for (int i = 0; i < Pieces.Count; i++)
         {
             if (Pieces[i].gameObject == obj) Pieces.Remove(Pieces[i]);
-            NumberOfPieces--;   
+            NumberOfPieces--;
         }
     }
 
@@ -110,7 +123,7 @@ public class ToyPiece : MonoBehaviour
 
     private void DeactivateToyPiece()
     {
-        transform.tag = "Defualt";
+        transform.tag = "Default";
     }
 
     private void AddToMerged()
@@ -122,7 +135,8 @@ public class ToyPiece : MonoBehaviour
     }
 
 
-    private void SetInteractionManager(GameObject InteractionManager) {
+    private void SetInteractionManager(GameObject InteractionManager)
+    {
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<XRSocketInteractor>().interactionManager = InteractionManager.GetComponent<XRInteractionManager>();
@@ -136,15 +150,10 @@ public class ToyPiece : MonoBehaviour
     void Start()
     {
 
-        GameObject InteractionManager = GameObject.FindGameObjectWithTag("InteractionManager");
+        //GameObject InteractionManager = GameObject.FindGameObjectWithTag("InteractionManager");
         ActivateSocketListeners();
+        AddTypeToList(gameObject);
 
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
 }
+
