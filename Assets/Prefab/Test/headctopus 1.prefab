@@ -263,12 +263,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PieceType: 
+  IsBase: 0
   NumberOfPieces: 1
   Pieces: []
-  IsBase: 0
   ToyTypes: []
-  PieceType: 
-  socket: []
+  voidlayer:
+    m_Bits: 0
 --- !u!65 &-8934903777174664984
 BoxCollider:
   m_ObjectHideFlags: 0
