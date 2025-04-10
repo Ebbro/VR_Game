@@ -3,6 +3,7 @@ using UnityEngine.XR.Interaction.Toolkit.Filtering;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using System.Collections.Generic;
+using UnityEngine.XR.Interaction.Toolkit;
 
     public class TagHoverAndSelectFilter : MonoBehaviour, IXRSelectFilter, IXRHoverFilter
 {
@@ -14,20 +15,25 @@ using System.Collections.Generic;
     //public string negatedTagHover = "ToyBase";
     [SerializeField] public List<string> negatedTags = new List<string>();
 
-        public bool canProcess => isActiveAndEnabled;
+    [SerializeField] InteractionLayerMask ToyInSocket = InteractionLayerMask.GetMask();
+    [SerializeField] InteractionLayerMask ToyPiece = InteractionLayerMask.GetMask();
+
+    public bool canProcess => isActiveAndEnabled;
 
     // Filtro per il socket (snap)
     public bool Process(IXRSelectInteractor interactor, IXRSelectInteractable interactable)
     {
         string tag = interactable.transform.tag;
 
+
+
         for (int i = 0; i < acceptedTags.Count; i++)
         {
-            if (tag == acceptedTags[i]) return true;
+            if (tag == acceptedTags[i] && interactable.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers != ToyPiece && interactable.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers != ToyInSocket) return true;
         }
         for (int i = 0; i < negatedTags.Count; i++)
         {
-            if (tag == negatedTags[i]) return true;
+            if (tag == negatedTags[i] && interactable.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers != ToyPiece && interactable.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers != ToyInSocket) return true;
         }
 
         return false;
@@ -49,12 +55,12 @@ using System.Collections.Generic;
 
         for (int i = 0; i < acceptedTags.Count; i++)
         {
-            if (tag == acceptedTags[i]) return true;
+            if (tag == acceptedTags[i] && interactable.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers != ToyPiece && interactable.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers != ToyInSocket) return true;
         }
 
         for (int i = 0; i < negatedTags.Count; i++)
         {
-            if (tag == negatedTags[i]) return false;
+            if (tag == negatedTags[i] && interactable.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers != ToyPiece && interactable.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers != ToyInSocket) return false;
         }
 
         return false;

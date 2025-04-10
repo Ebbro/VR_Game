@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using static UnityEngine.Rendering.GPUSort;
+using System.Threading.Tasks;
 
 public class HandGrabTracker : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class HandGrabTracker : MonoBehaviour
 
     [SerializeField] InteractionLayerMask MergableLayer = InteractionLayerMask.GetMask();
     [SerializeField] InteractionLayerMask BasicLayer = InteractionLayerMask.GetMask();
+    [SerializeField] InteractionLayerMask ToyInSocket = InteractionLayerMask.GetMask();
+
 
     private void OnEnable()
     {
@@ -55,7 +59,7 @@ public class HandGrabTracker : MonoBehaviour
     private void OnLeftRelease(SelectExitEventArgs args)
     {
         Debug.Log($"Left hand released {leftHeldItem?.name}");
-        if (args.interactableObject.transform.tag == "ToyPiece") args.interactableObject.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers = BasicLayer;
+        ResetInteractable(args);
         leftHeldItem = null;
     }
 
@@ -69,15 +73,19 @@ public class HandGrabTracker : MonoBehaviour
     private void OnRightRelease(SelectExitEventArgs args)
     {
         Debug.Log($"Right hand released {rightHeldItem?.name}");
-        if (args.interactableObject.transform.tag == "ToyPiece") args.interactableObject.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers = BasicLayer;
+        ResetInteractable(args);
+        
         rightHeldItem = null;
     }
-
+    async private void ResetInteractable(SelectExitEventArgs args)
+    {
+        await Task.Yield();
+        if (args.interactableObject.transform.tag == "ToyPiece" && args.interactableObject.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers != ToyInSocket) args.interactableObject.transform.gameObject.GetComponent<XRGrabInteractable>().interactionLayers = BasicLayer;
+    }
     private void Start()
     {
-         OnEnable();
+        OnEnable();
     }
-
 }
 
 

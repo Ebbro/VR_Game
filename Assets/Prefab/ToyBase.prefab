@@ -89,9 +89,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 3580986705011253837}
   m_StartingSelectFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 3580986705011253837}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -115,8 +115,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTags: []
-  negatedTags: []
+  acceptedTags:
+  - MergableStase
+  - ToyPiece
+  negatedTags:
+  - ToyBase
+  - ToyPiece
+  - ToyInSocket
 --- !u!1 &1254106033265173397
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,9 +211,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 4918678685404666161}
   m_StartingSelectFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 4918678685404666161}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -232,8 +237,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTags: []
-  negatedTags: []
+  acceptedTags:
+  - MergableStase
+  - ToyPiece
+  negatedTags:
+  - ToyBase
+  - ToyPiece
+  - ToyInSocket
 --- !u!1 &1547808169140098348
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,9 +618,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 4025233582481719580}
   m_StartingSelectFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 4025233582481719580}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -634,8 +644,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTags: []
-  negatedTags: []
+  acceptedTags:
+  - MergableStase
+  - ToyPiece
+  negatedTags:
+  - ToyBase
+  - ToyPiece
+  - ToyInSocket
 --- !u!1 &2118459614964788031
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,9 +740,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 6396621671608758064}
   m_StartingSelectFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 6396621671608758064}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -751,8 +766,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTags: []
-  negatedTags: []
+  acceptedTags:
+  - MergableStase
+  - ToyPiece
+  negatedTags:
+  - ToyBase
+  - ToyPiece
+  - ToyInSocket
 --- !u!1 &5620100173908204882
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,9 +862,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_StartingHoverFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 7529842650284368184}
   m_StartingSelectFilters:
-  - {fileID: 8499306666593602861}
+  - {fileID: 7529842650284368184}
   m_ShowInteractableHoverMeshes: 1
   m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 1c01c8fba05ac7340baaab6707a91a0e, type: 2}
   m_InteractableCantHoverMeshMaterial: {fileID: 2100000, guid: c07abf6c43addfa47b426b2ce9b2fe5f, type: 2}
@@ -868,8 +888,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47957ba22efefe24ba8d206e8875695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceptedTags: []
-  negatedTags: []
+  acceptedTags:
+  - MergableStase
+  - ToyPiece
+  negatedTags:
+  - ToyBase
+  - ToyPiece
+  - ToyInSocket
 --- !u!1 &5678208042845778537
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,6 +1012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceptedTags:
   - MergableStase
+  - ToyPiece
   negatedTags:
   - ToyBase
   - ToyPiece

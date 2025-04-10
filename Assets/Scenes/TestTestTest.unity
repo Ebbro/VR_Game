@@ -536,6 +536,8 @@ MonoBehaviour:
     m_Bits: 2097152
   BasicLayer:
     m_Bits: 33554432
+  ToyInSocket:
+    m_Bits: 8388608
 --- !u!1 &719971885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
