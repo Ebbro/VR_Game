@@ -11,7 +11,7 @@ public class ToyPiece : MonoBehaviour
 {
     [SerializeField] private string PieceType = null;
 
-    [SerializeField] private bool IsBase = false;
+    [SerializeField] public bool IsBase = false;
 
     [SerializeField] public int NumberOfPieces = 1;
     [SerializeField] private List<GameObject> Pieces = new List<GameObject>();
@@ -155,5 +155,30 @@ public class ToyPiece : MonoBehaviour
         AddTypeToList(gameObject);
 
     }
+    public string GetPieceType()
+{
+    return PieceType;
+}
+
+public int GetNumberOfPieces()
+{
+    return NumberOfPieces;
+}
+public void DistruggiCompletamente()
+{
+    if (!IsBase) return;
+
+    // Distrugge prima tutti i pezzi collegati
+    foreach (GameObject pezzo in Pieces)
+    {
+        if (pezzo != null)
+        {
+            Destroy(pezzo);
+        }
+    }
+
+    // Infine distrugge se stesso (la base)
+    Destroy(gameObject);
+}
 }
 

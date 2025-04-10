@@ -4,22 +4,34 @@ public class VerificatoreOrdine : MonoBehaviour
 {
     public ManagerOrdini managerOrdini;
 
-    private void OnTriggerEnter(Collider other)
-{
-    Debug.Log($"Oggetto entrato: {other.name}");
-    
-}
-
     private void OnTriggerStay(Collider other)
 {
-    ComponenteOggetto oggetto = other.GetComponentInChildren<ComponenteOggetto>();
-
-    Debug.Log($"Tipo: {oggetto.tipo}, Quantità: {oggetto.quantita}");
+    ToyPiece toy = other.GetComponentInChildren<ToyPiece>();
+    if (toy == null) return;
 
     int punti;
-    // Ora il metodo restituisce sempre true
-    managerOrdini.OrdineCorrenteValido(oggetto.tipo, oggetto.quantita, out punti);
+    bool ordineCorretto = managerOrdini.VerificaOrdine(toy, out punti);
+
+    if (!ordineCorretto)
+    {
+        Debug.Log("Ordine sbagliato. Nessun punto assegnato.");
+        punti = 0;
+    }
+    else
+    {
+        Debug.Log("Ordine corretto! + " + punti + " punti");
+    }
+
     managerOrdini.CompletaOrdine(punti);
-    Destroy(other.gameObject);
+    // Se è una base, distrugge anche i pezzi
+    if (toy.IsBase)
+    {
+        toy.DistruggiCompletamente();
+    }
+    else
+    {
+        Destroy(toy.gameObject);
+    }
+
 }
 }
