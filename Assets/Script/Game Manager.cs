@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public Text timerText; // <-- Usiamo Text normale qui
+    public Text punteggioText; // Testo per visualizzare il punteggio
+
+    private int punteggio = 0; // Punteggio totale del giocatore
 
     private void Awake()
     {
@@ -54,10 +57,22 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         Debug.Log("Game Over: Time's up!");
     }
+
+    public void AggiungiPunti(int punti)
+    {
+        punteggio += punti;
+        AggiornaTestoPunteggio();
+    }
+
+    private void AggiornaTestoPunteggio()
+    {
+        punteggioText.text = $"Punteggio: {punteggio}";
+    }
+
     public void AggiungiTempo(float tempoDaAggiungere)
-{
-    elapsedTime -= tempoDaAggiungere;
-    if (elapsedTime < 0f)
-        elapsedTime = 0f;
-}
+    {
+        elapsedTime -= tempoDaAggiungere;
+        if (elapsedTime < 0f)
+            elapsedTime = 0f;
+    }
 }
