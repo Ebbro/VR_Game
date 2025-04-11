@@ -128,7 +128,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 33554432
+    m_Bits: 33554433
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -247,12 +247,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PieceType: Polpo
+  PieceName: Tentacolo
+  IsBase: 0
   NumberOfPieces: 1
   Pieces: []
-  IsBase: 0
   ToyTypes: []
-  PieceType: 
-  socket: []
+  voidlayer:
+    m_Bits: 0
 --- !u!65 &6185348942498764726
 BoxCollider:
   m_ObjectHideFlags: 0

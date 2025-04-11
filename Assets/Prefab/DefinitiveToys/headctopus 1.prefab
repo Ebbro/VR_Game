@@ -570,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 20b6ee2e15087e847a46d2c26a36a01f, type: 3}
       propertyPath: m_TagString
-      value: ToyPiece
+      value: ToyBase
       objectReference: {fileID: 0}
     - target: {fileID: 5859259852128964746, guid: 20b6ee2e15087e847a46d2c26a36a01f, type: 3}
       propertyPath: m_Layer
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 176160769
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -784,9 +784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PieceType: 
-  PieceName: 
-  IsBase: 0
+  PieceType: Polpo
+  PieceName: Base Polipo
+  IsBase: 1
   NumberOfPieces: 1
   Pieces: []
   ToyTypes: []

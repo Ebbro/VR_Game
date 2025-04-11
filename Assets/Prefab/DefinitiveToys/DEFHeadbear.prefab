@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DEFHeadbear
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b579a52c345c6a949a3cc0cea54818e6, type: 3}
+      propertyPath: m_TagString
+      value: ToyPiece
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -77,6 +81,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b579a52c345c6a949a3cc0cea54818e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3125831257326035584}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b579a52c345c6a949a3cc0cea54818e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3521072933246996605}
   m_SourcePrefab: {fileID: 100100000, guid: b579a52c345c6a949a3cc0cea54818e6, type: 3}
 --- !u!1 &6761416907939089086 stripped
 GameObject:
@@ -125,7 +132,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 33554433
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -254,3 +261,23 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8839368762345780380, guid: b579a52c345c6a949a3cc0cea54818e6, type: 3}
+--- !u!114 &3521072933246996605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6761416907939089086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceType: Orsacchiotto
+  PieceName: Testa Orsacchiotto
+  IsBase: 0
+  NumberOfPieces: 1
+  Pieces: []
+  ToyTypes: []
+  voidlayer:
+    m_Bits: 0

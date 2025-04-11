@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.002407223
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,35 +18,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.010944036
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8322739
+      value: 0.8970398
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.050125934
+      value: -0.0024902325
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.46904424
+      value: 0.32863635
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.2912132
+      value: -0.29548547
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 10.938
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 37.014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -32.793
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -59,6 +59,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       propertyPath: m_Name
       value: DEFLeftArmBear
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
+      propertyPath: m_TagString
+      value: ToyPiece
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73,6 +77,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7375694462025188596}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6747312652731150438}
   m_SourcePrefab: {fileID: 100100000, guid: 666fcf667e8d60e408ce09b390594e7c, type: 3}
 --- !u!1 &2718281499520447085 stripped
 GameObject:
@@ -121,7 +128,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 33554433
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -249,3 +256,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.004243622, y: 0.002288807, z: 0.0026015388}
   m_Center: {x: 0.0019475467, y: -0.0007058662, z: 0.0010380929}
+--- !u!114 &6747312652731150438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718281499520447085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceType: Orsacchiotto
+  PieceName: Braccio Sx Orsacchiotto
+  IsBase: 0
+  NumberOfPieces: 1
+  Pieces: []
+  ToyTypes: []
+  voidlayer:
+    m_Bits: 0

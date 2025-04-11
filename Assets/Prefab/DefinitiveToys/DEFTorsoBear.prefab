@@ -690,6 +690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DEFTorsoBear
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f8cd7b1fadd247a4eb7041715331f81d, type: 3}
+      propertyPath: m_TagString
+      value: ToyBase
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -717,7 +721,10 @@ PrefabInstance:
       addedObject: {fileID: 1565444784465632096}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f8cd7b1fadd247a4eb7041715331f81d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7817500589799581491}
+      addedObject: {fileID: 1144269577987258859}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f8cd7b1fadd247a4eb7041715331f81d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3303744446528744093}
   m_SourcePrefab: {fileID: 100100000, guid: f8cd7b1fadd247a4eb7041715331f81d, type: 3}
 --- !u!4 &6926522873789811169 stripped
 Transform:
@@ -771,7 +778,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 176160769
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -878,7 +885,27 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!65 &7817500589799581491
+--- !u!114 &1144269577987258859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7733845451533472603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceType: Orsacchiotto
+  PieceName: Base Orsacchiotto
+  IsBase: 1
+  NumberOfPieces: 1
+  Pieces: []
+  ToyTypes: []
+  voidlayer:
+    m_Bits: 0
+--- !u!65 &3303744446528744093
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -897,5 +924,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0025106962, y: 0.0019452457, z: 0.0018749877}
-  m_Center: {x: 0.00036119536, y: -0.00025520718, z: 0.00023701384}
+  m_Size: {x: 0.001747103, y: 0.0019541222, z: 0.0019839064}
+  m_Center: {x: 0, y: -0.00025319416, z: 0.00015806656}

@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftLegrex
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d97e3ab94b38c44abfbab6befa94207, type: 3}
+      propertyPath: m_TagString
+      value: ToyPiece
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -69,6 +73,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d97e3ab94b38c44abfbab6befa94207, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6855500185281989079}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d97e3ab94b38c44abfbab6befa94207, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6695619268197243262}
   m_SourcePrefab: {fileID: 100100000, guid: 5d97e3ab94b38c44abfbab6befa94207, type: 3}
 --- !u!1 &5428383885662897257 stripped
 GameObject:
@@ -117,7 +124,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 33554433
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -245,3 +252,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010866118, y: 0.012612629, z: 0.026885364}
   m_Center: {x: 0.0024679252, y: 0.0032986228, z: -0.013116907}
+--- !u!114 &6695619268197243262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428383885662897257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceType: Dinosauro
+  PieceName: Gamba Sx Dinosauro
+  IsBase: 0
+  NumberOfPieces: 1
+  Pieces: []
+  ToyTypes: []
+  voidlayer:
+    m_Bits: 0

@@ -572,6 +572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torsorex
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c859822fbca962428f7f270dc7ad8b3, type: 3}
+      propertyPath: m_TagString
+      value: ToyBase
+      objectReference: {fileID: 0}
     - target: {fileID: 8509845741187614460, guid: 7c859822fbca962428f7f270dc7ad8b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -609,6 +613,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c859822fbca962428f7f270dc7ad8b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5342630357086450000}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c859822fbca962428f7f270dc7ad8b3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 942263718781859002}
   m_SourcePrefab: {fileID: 100100000, guid: 7c859822fbca962428f7f270dc7ad8b3, type: 3}
 --- !u!1 &4796100318925330135 stripped
 GameObject:
@@ -657,7 +664,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 176160769
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -785,6 +792,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0048267883, y: 0.0021007254, z: 0.0036060165}
   m_Center: {x: -0.000045738274, y: -0.000028736267, z: -0.00019099578}
+--- !u!114 &942263718781859002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796100318925330135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceType: DInosauro
+  PieceName: Base Dinosauro
+  IsBase: 1
+  NumberOfPieces: 1
+  Pieces: []
+  ToyTypes: []
+  voidlayer:
+    m_Bits: 0
 --- !u!4 &5315649956543908973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7c859822fbca962428f7f270dc7ad8b3, type: 3}
