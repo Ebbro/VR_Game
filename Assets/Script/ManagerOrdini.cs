@@ -5,20 +5,9 @@ using TMPro;
 
 public class ManagerOrdini : MonoBehaviour
 {
-    [System.Serializable]
-    public class ComponenteOrdine
-    {
-        public string tipo;
-        public int quantita;
+    
 
-        public ComponenteOrdine(string tipo, int quantita)
-        {
-            this.tipo = tipo;
-            this.quantita = quantita;
-        }
-    }
-
-    public List<ComponenteOrdine> ordini = new List<ComponenteOrdine>();
+   public List<OrdineToyPiece> ordini = new List<OrdineToyPiece>();
     public TextMeshProUGUI ordineText;
     public Text punteggioText; // Testo per visualizzare il punteggio
 
@@ -27,6 +16,18 @@ public class ManagerOrdini : MonoBehaviour
     public int maxQuantita = 2;
 
     private int punteggio = 0; // Punteggio totale del giocatore
+    [System.Serializable]
+    public class OrdineToyPiece
+        {   
+    public string PieceType;
+    public int NumberOfPieces;
+
+    public OrdineToyPiece(string tipo, int quantita)
+    {
+        PieceType = tipo;
+        NumberOfPieces = quantita;
+    }
+        }
 
     void Start()
     {
@@ -35,33 +36,35 @@ public class ManagerOrdini : MonoBehaviour
     }
 
     private void GeneraNuovoOrdine()
-    {
-        string tipo = tipiPossibili[Random.Range(0, tipiPossibili.Length)];
-        int quantita = Random.Range(minQuantita, maxQuantita + 1);
+{
+    if (tipiPossibili.Length == 0) return;
 
-        ordini.Add(new ComponenteOrdine(tipo, quantita));
-        AggiornaTestoOrdine();
-    }
+    // Seleziona tipo e quantità random
+    string tipo = tipiPossibili[Random.Range(0, tipiPossibili.Length)];
+    int quantita = Random.Range(minQuantita, maxQuantita + 1);
 
-public bool VerificaOrdine(ToyPiece toyPiece, out int punti)
+    OrdineToyPiece nuovoOrdine = new OrdineToyPiece(tipo, quantita);
+    ordini.Add(nuovoOrdine);
+
+    AggiornaTestoOrdine();
+}
+
+public bool VerificaOrdine(ToyPiece toy, out int punti)
 {
     punti = 0;
 
-    if (ordini.Count == 0 || toyPiece == null)
+    if (ordini.Count == 0 || toy == null)
         return false;
 
-    string tipoPezzo = toyPiece.GetPieceType();
-    int numeroPezzi = toyPiece.GetNumberOfPieces();
+    string tipoRichiesto = ordini[0].PieceType;
+    int quantitaRichiesta = ordini[0].NumberOfPieces;
 
-    bool tipoCorretto = ordini[0].tipo == tipoPezzo;
-    bool quantitaCorretta = ordini[0].quantita == numeroPezzi;
+    bool contieneTipo = toy.ContieneTipoRichiesto(tipoRichiesto);
+    bool quantitaCorretta = toy.NumberOfPieces == quantitaRichiesta;
 
-    if (tipoCorretto && quantitaCorretta)
+    if (contieneTipo && quantitaCorretta)
     {
-        punti = 15; // o usa valori serializzati
-        if (GameManager.Instance != null)
-            GameManager.Instance.AggiungiTempo(15f);
-
+        punti = 15;
         return true;
     }
 
@@ -85,12 +88,17 @@ public bool VerificaOrdine(ToyPiece toyPiece, out int punti)
     }
 
     private void AggiornaTestoOrdine()
+{
+    if (ordini.Count > 0)
     {
-        if (ordini.Count > 0)
-            ordineText.text = $"Tipo: {ordini[0].tipo}\nQuantità: {ordini[0].quantita}";
-        else
-            ordineText.text = "Nessun ordine disponibile";
+        var ordine = ordini[0];
+        ordineText.text = $"Tipo: {ordine.PieceType}\nQuantità: {ordine.NumberOfPieces}";
     }
+    else
+    {
+        ordineText.text = "Nessun ordine disponibile";
+    }
+}
 
     private void AggiornaTestoPunteggio()
     {

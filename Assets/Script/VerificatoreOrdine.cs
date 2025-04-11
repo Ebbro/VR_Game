@@ -6,7 +6,7 @@ public class VerificatoreOrdine : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
 {
-    ToyPiece toy = other.GetComponentInChildren<ToyPiece>();
+    ToyPiece toy = other.GetComponentInParent<ToyPiece>();
     if (toy == null) return;
 
     int punti;

@@ -86,15 +86,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 683b87e500324a741a45515edb634682, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1709899344647858781}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 683b87e500324a741a45515edb634682, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4383858095138687170}
     - targetCorrespondingSourceObject: {fileID: -208595431880416365, guid: 683b87e500324a741a45515edb634682, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2569548845635199127}
-    - targetCorrespondingSourceObject: {fileID: -208595431880416365, guid: 683b87e500324a741a45515edb634682, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6906139346343258212}
-    - targetCorrespondingSourceObject: {fileID: -208595431880416365, guid: 683b87e500324a741a45515edb634682, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 303702947084359160}
   m_SourcePrefab: {fileID: 100100000, guid: 683b87e500324a741a45515edb634682, type: 3}
 --- !u!1 &599842790677887985 stripped
 GameObject:
@@ -123,33 +120,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3329902420748629119, guid: 683b87e500324a741a45515edb634682, type: 3}
---- !u!114 &6906139346343258212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599842790677887985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6ffd9c26e67c2d4fb097fdd798c6cf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tipo: 
-  quantita: 0
---- !u!114 &303702947084359160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599842790677887985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dca725c0c0bee04591d3112bc296a9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnBase: {fileID: 0}
 --- !u!1 &8757411695189402931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 683b87e500324a741a45515edb634682, type: 3}
@@ -197,7 +167,7 @@ MonoBehaviour:
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
-    m_Bits: 33554433
+    m_Bits: 134217729
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -304,3 +274,23 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!114 &4383858095138687170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757411695189402931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce233e46e55dd94cb50fed16bde8aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PieceType: Orsacchiotto
+  PieceName: 
+  IsBase: 1
+  NumberOfPieces: 1
+  Pieces: []
+  ToyTypes: []
+  voidlayer:
+    m_Bits: 0

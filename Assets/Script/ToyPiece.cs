@@ -9,7 +9,8 @@ using static UnityEngine.Rendering.GPUSort;
 
 public class ToyPiece : MonoBehaviour
 {
-    [SerializeField] private string PieceType = null;
+    [SerializeField] public string PieceType = null;
+    [SerializeField] public string PieceName = null;
 
     [SerializeField] public bool IsBase = false;
 
@@ -17,7 +18,7 @@ public class ToyPiece : MonoBehaviour
     [SerializeField] private List<GameObject> Pieces = new List<GameObject>();
 
     
-    [SerializeField] private List<string> ToyTypes = new List<string>();
+    [SerializeField] public List<string> ToyTypes = new List<string>();
 
     
 
@@ -179,6 +180,24 @@ public void DistruggiCompletamente()
 
     // Infine distrugge se stesso (la base)
     Destroy(gameObject);
+}
+public bool ContieneTipoRichiesto(string tipoRichiesto)
+{
+    if (PieceType == tipoRichiesto)
+        return true;
+
+    foreach (GameObject pezzo in Pieces)
+    {
+        if (pezzo == null) continue;
+
+        ToyPiece toy = pezzo.GetComponent<ToyPiece>();
+        if (toy != null && toy.PieceType == tipoRichiesto)
+        {
+            return true;
+        }
+    }
+
+    return false;
 }
 }
 
