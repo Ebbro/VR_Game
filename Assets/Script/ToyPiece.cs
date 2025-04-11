@@ -199,5 +199,23 @@ public bool ContieneTipoRichiesto(string tipoRichiesto)
 
     return false;
 }
+public bool ContienePezzoRichiesto(string pezzoRichiesto)
+{
+    if (PieceName == pezzoRichiesto)
+        return true;
+
+    foreach (GameObject pezzo in Pieces)
+    {
+        if (pezzo == null) continue;
+
+        ToyPiece toy = pezzo.GetComponent<ToyPiece>();
+        if (toy != null && toy.PieceName == pezzoRichiesto)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
 }
 

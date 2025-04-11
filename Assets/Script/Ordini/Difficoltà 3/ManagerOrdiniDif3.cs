@@ -16,6 +16,7 @@ public class ManagerOrdiniDif3 : MonoBehaviour
     {   
         public string PieceType;
         public int NumberOfPieces;
+        public string PieceName;
 
         public OrdineToyPiece(string tipo, int quantita)
         {
@@ -49,12 +50,14 @@ public class ManagerOrdiniDif3 : MonoBehaviour
         return 0;
 
     string tipoRichiesto = ordini[0].PieceType;
+    string pezzoRichiesto = ordini[0].PieceName;
     int quantitaRichiesta = ordini[0].NumberOfPieces;
 
     bool contieneTipo = toy.ContieneTipoRichiesto(tipoRichiesto);
+    bool contienePezzo = toy.ContienePezzoRichiesto(pezzoRichiesto);
     bool quantitaCorretta = toy.NumberOfPieces == quantitaRichiesta;
 
-    if (contieneTipo && quantitaCorretta)
+    if (contieneTipo && quantitaCorretta && contienePezzo)
     {
         return 15; // Punteggio per un ordine corretto
     }
