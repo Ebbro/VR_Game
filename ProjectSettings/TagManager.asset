@@ -10,6 +10,7 @@ TagManager:
   - AttachPoint
   - InteractionManager
   - Attachable
+  - ManagerOrdini
   layers:
   - Default
   - TransparentFX
