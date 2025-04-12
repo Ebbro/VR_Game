@@ -7,6 +7,7 @@ public class ManagerOrdiniDif2 : MonoBehaviour
     public List<OrdineToyPiece> ordini = new List<OrdineToyPiece>();
     public TextMeshProUGUI ordineText;
 
+    public string[] basiPossibili = { "Orsacchiotto", "Polpo", "", ""};
     public string[] tipiPossibili = { "Orsacchiotto", "Polpo", "", ""};
     public int minQuantita = 1;
     public int maxQuantita = 2;
@@ -18,8 +19,9 @@ public class ManagerOrdiniDif2 : MonoBehaviour
         public int NumberOfPieces;
         public string PieceName;
 
-        public OrdineToyPiece(string tipo, int quantita)
+        public OrdineToyPiece(string tipo, int quantita,string baseName)
         {
+            PieceName = baseName;
             PieceType = tipo;
             NumberOfPieces = quantita;
         }
@@ -35,10 +37,11 @@ public class ManagerOrdiniDif2 : MonoBehaviour
         if (tipiPossibili.Length == 0) return;
 
         // Seleziona tipo e quantità random
+        string baseName = basiPossibili[Random.Range(0, basiPossibili.Length)];
         string tipo = tipiPossibili[Random.Range(0, tipiPossibili.Length)];
         int quantita = Random.Range(minQuantita, maxQuantita + 1);
 
-        OrdineToyPiece nuovoOrdine = new OrdineToyPiece(tipo, quantita);
+        OrdineToyPiece nuovoOrdine = new OrdineToyPiece(tipo, quantita,baseName);
         ordini.Add(nuovoOrdine);
 
         AggiornaTestoOrdine();
@@ -82,7 +85,7 @@ public class ManagerOrdiniDif2 : MonoBehaviour
         if (ordini.Count > 0)
         {
             var ordine = ordini[0];
-            ordineText.text = $"Tipo: {ordine.PieceType}\nQuantità: {ordine.NumberOfPieces}";
+            ordineText.text = $"Base: {ordine.PieceName}\nTipo: {ordine.PieceType}\nQuantità: {ordine.NumberOfPieces}";
         }
         else
         {

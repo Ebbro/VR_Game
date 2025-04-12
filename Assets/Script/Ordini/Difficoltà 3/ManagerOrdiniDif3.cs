@@ -7,20 +7,21 @@ public class ManagerOrdiniDif3 : MonoBehaviour
     public List<OrdineToyPiece> ordini = new List<OrdineToyPiece>();
     public TextMeshProUGUI ordineText;
 
-    public string[] tipiPossibili = { "Orsacchiotto", "Polpo", "", ""};
+    public string[] pezziSpecifici = { "Orsacchiotto", "Polpo", "", ""};
+    public string[] basi = { "Orsacchiotto", "Polpo", "", ""};
     public int minQuantita = 1;
     public int maxQuantita = 2;
 
     [System.Serializable]
     public class OrdineToyPiece
     {   
-        public string PieceType;
+        public string PieceTarget;
         public int NumberOfPieces;
         public string PieceName;
 
-        public OrdineToyPiece(string tipo, int quantita)
+        public OrdineToyPiece(string pezzoSpecifico, int quantita)
         {
-            PieceType = tipo;
+            PieceTarget = pezzoSpecifico;
             NumberOfPieces = quantita;
         }
     }
@@ -32,13 +33,14 @@ public class ManagerOrdiniDif3 : MonoBehaviour
 
     private void GeneraNuovoOrdine()
     {
-        if (tipiPossibili.Length == 0) return;
+        if (pezziSpecifici.Length == 0) return;
 
         // Seleziona tipo e quantità random
-        string tipo = tipiPossibili[Random.Range(0, tipiPossibili.Length)];
+         string basePezzo = basi[Random.Range(0, basi.Length)];
+        string pezzoSpecifico = pezziSpecifici[Random.Range(0, pezziSpecifici.Length)];
         int quantita = Random.Range(minQuantita, maxQuantita + 1);
 
-        OrdineToyPiece nuovoOrdine = new OrdineToyPiece(tipo, quantita);
+        OrdineToyPiece nuovoOrdine = new OrdineToyPiece(pezzoSpecifico, quantita);
         ordini.Add(nuovoOrdine);
 
         AggiornaTestoOrdine();
@@ -49,15 +51,15 @@ public class ManagerOrdiniDif3 : MonoBehaviour
     if (ordini.Count == 0 || toy == null)
         return 0;
 
-    string tipoRichiesto = ordini[0].PieceType;
+    string pezzoSpecificoRichiesto = ordini[0].PieceTarget;
     string pezzoRichiesto = ordini[0].PieceName;
     int quantitaRichiesta = ordini[0].NumberOfPieces;
 
-    bool contieneTipo = toy.ContieneTipoRichiesto(tipoRichiesto);
+    bool contienePezzoSpecifico = toy.ContienePezzoRichiesto(pezzoSpecificoRichiesto);
     bool contienePezzo = toy.ContienePezzoRichiesto(pezzoRichiesto);
     bool quantitaCorretta = toy.NumberOfPieces == quantitaRichiesta;
 
-    if (contieneTipo && quantitaCorretta && contienePezzo)
+    if (contienePezzoSpecifico && quantitaCorretta && contienePezzo)
     {
         return 15; // Punteggio per un ordine corretto
     }
@@ -82,7 +84,7 @@ public class ManagerOrdiniDif3 : MonoBehaviour
         if (ordini.Count > 0)
         {
             var ordine = ordini[0];
-            ordineText.text = $"Tipo: {ordine.PieceType}\nQuantità: {ordine.NumberOfPieces}";
+            ordineText.text = $"Base:{ordine.PieceName}\nPezzo: {ordine.PieceTarget}\nQuantità: {ordine.NumberOfPieces}";
         }
         else
         {

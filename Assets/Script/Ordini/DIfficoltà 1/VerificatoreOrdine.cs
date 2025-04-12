@@ -4,20 +4,30 @@ public class VerificatoreOrdine : MonoBehaviour
 {
     public ManagerOrdini managerOrdini;
 
+
     private void OnTriggerEnter(Collider other)
     {
         ToyPiece toy = other.GetComponent<ToyPiece>();
         if (toy == null) return;
+        // Controlla se il pezzo è una "base"
+        if (!toy.IsBase)
+        {
+            // Se non è una base, non verificare l'ordine e uscire dalla funzione
+            return;
+        }
+
 
         int punti = managerOrdini.VerificaOrdine(toy);  // Ora otteniamo il punteggio direttamente
 
         if (punti == 0)
         {
             Debug.Log("Ordine sbagliato. Nessun punto assegnato.");
+           
         }
         else
         {
             Debug.Log("Ordine corretto! + " + punti + " punti");
+ 
         }
 
         // Passa i punti al GameManager per la gestione del punteggio

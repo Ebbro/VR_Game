@@ -6,6 +6,9 @@ public class ManagerOrdini : MonoBehaviour
 {
     public List<OrdineToyPiece> ordini = new List<OrdineToyPiece>();
     public TextMeshProUGUI ordineText;
+    public AudioSource audioSource;  // Riferimento all'AudioSource
+    public AudioClip ordineCorrettoClip;  // Suono per ordine corretto
+    public AudioClip ordineSbagliatoClip; // Suono per ordine sbagliato
 
 
      public string[] pezziPossibili = { "Orsacchiotto", "Polpo", "", ""};
@@ -58,9 +61,11 @@ public class ManagerOrdini : MonoBehaviour
     if (quantitaCorretta && contienePezzo)
     {
         return 15; // Punteggio per un ordine corretto
+         audioSource.PlayOneShot(ordineSbagliatoClip);
     }
 
     return 0; // Nessun punteggio per un ordine sbagliato
+                audioSource.PlayOneShot(ordineCorrettoClip);
 }
 
     public void CompletaOrdine()
