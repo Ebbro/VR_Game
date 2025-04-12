@@ -11,6 +11,8 @@ public class ManagerOrdiniDif2 : MonoBehaviour
     public string[] tipiPossibili = { "Orsacchiotto", "Polpo", "", ""};
     public int minQuantita = 1;
     public int maxQuantita = 2;
+    public GameManager gameManager;  // Assicurati di assegnarlo da Inspector
+    public float tempoBonusPerOrdine = 5f;  // Tempo da aggiungere per ordine corretto
 
     [System.Serializable]
     public class OrdineToyPiece
@@ -62,6 +64,10 @@ public class ManagerOrdiniDif2 : MonoBehaviour
 
     if (contieneTipo && quantitaCorretta && contienePezzo)
     {
+        if (gameManager != null)
+        {
+            gameManager.AggiungiTempo(tempoBonusPerOrdine);
+        }
         return 15; // Punteggio per un ordine corretto
     }
 

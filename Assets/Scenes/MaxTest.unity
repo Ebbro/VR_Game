@@ -314,8 +314,10 @@ MonoBehaviour:
   - Base Orsacchiotto
   - Base Polpo
   - Base Dinosauro
-  minQuantita: 1
+  minQuantita: 2
   maxQuantita: 2
+  gameManager: {fileID: 85272662}
+  tempoBonusPerOrdine: 5
 --- !u!4 &208583753
 Transform:
   m_ObjectHideFlags: 0
@@ -445,8 +447,10 @@ MonoBehaviour:
   - Orsacchiotto
   - Polpo
   - Dinosauro
-  minQuantita: 1
+  minQuantita: 2
   maxQuantita: 5
+  gameManager: {fileID: 85272662}
+  tempoBonusPerOrdine: 5
 --- !u!4 &260861650
 Transform:
   m_ObjectHideFlags: 0
@@ -2040,8 +2044,10 @@ MonoBehaviour:
   - Orsacchiotto
   - Polpo
   - Dinosauro
-  minQuantita: 1
+  minQuantita: 2
   maxQuantita: 3
+  gameManager: {fileID: 85272662}
+  tempoBonusPerOrdine: 5
 --- !u!4 &1391748831
 Transform:
   m_ObjectHideFlags: 0
