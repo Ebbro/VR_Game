@@ -430,9 +430,6 @@ MonoBehaviour:
   ordini: []
   ordineText: {fileID: 614206509}
   pezziSpecifici:
-  - Base Orsacchiotto
-  - Base Polpo
-  - Base Dinosauro
   - Coda Dinosauro
   - Gamba Dx Dinosauro
   - Gamba Sx Dinosauro
@@ -444,9 +441,9 @@ MonoBehaviour:
   - Braccio Sx Orsacchiotto
   - Braccio Dx Orsacchiotto
   basi:
-  - Orsacchiotto
-  - Polpo
-  - Dinosauro
+  - Base Orsacchiotto
+  - Base Polpo
+  - Base Dinosauro
   minQuantita: 2
   maxQuantita: 5
   gameManager: {fileID: 85272662}
