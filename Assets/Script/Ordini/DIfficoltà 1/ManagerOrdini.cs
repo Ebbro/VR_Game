@@ -7,19 +7,20 @@ public class ManagerOrdini : MonoBehaviour
     public List<OrdineToyPiece> ordini = new List<OrdineToyPiece>();
     public TextMeshProUGUI ordineText;
 
-    public string[] tipiPossibili = { "Orsacchiotto", "Polpo", "", ""};
+
+     public string[] pezziPossibili = { "Orsacchiotto", "Polpo", "", ""};
     public int minQuantita = 1;
     public int maxQuantita = 2;
 
     [System.Serializable]
     public class OrdineToyPiece
     {   
-        public string PieceType;
         public int NumberOfPieces;
+        public string PieceName;
 
-        public OrdineToyPiece(string tipo, int quantita)
+        public OrdineToyPiece(string pezzo, int quantita)
         {
-            PieceType = tipo;
+            PieceName = pezzo;
             NumberOfPieces = quantita;
         }
     }
@@ -31,13 +32,13 @@ public class ManagerOrdini : MonoBehaviour
 
     private void GeneraNuovoOrdine()
     {
-        if (tipiPossibili.Length == 0) return;
+        if (pezziPossibili.Length == 0) return;
 
         // Seleziona tipo e quantità random
-        string tipo = tipiPossibili[Random.Range(0, tipiPossibili.Length)];
+        string pezzo = pezziPossibili[Random.Range(0, pezziPossibili.Length)];
         int quantita = Random.Range(minQuantita, maxQuantita + 1);
 
-        OrdineToyPiece nuovoOrdine = new OrdineToyPiece(tipo, quantita);
+        OrdineToyPiece nuovoOrdine = new OrdineToyPiece(pezzo, quantita);
         ordini.Add(nuovoOrdine);
 
         AggiornaTestoOrdine();
@@ -48,13 +49,13 @@ public class ManagerOrdini : MonoBehaviour
     if (ordini.Count == 0 || toy == null)
         return 0;
 
-    string tipoRichiesto = ordini[0].PieceType;
+    string pezzoRichiesto = ordini[0].PieceName;
     int quantitaRichiesta = ordini[0].NumberOfPieces;
 
-    bool contieneTipo = toy.ContieneTipoRichiesto(tipoRichiesto);
+    bool contienePezzo = toy.ContienePezzoRichiesto(pezzoRichiesto);
     bool quantitaCorretta = toy.NumberOfPieces == quantitaRichiesta;
 
-    if (contieneTipo && quantitaCorretta)
+    if (quantitaCorretta && contienePezzo)
     {
         return 15; // Punteggio per un ordine corretto
     }
@@ -62,7 +63,7 @@ public class ManagerOrdini : MonoBehaviour
     return 0; // Nessun punteggio per un ordine sbagliato
 }
 
-  public void CompletaOrdine()
+    public void CompletaOrdine()
 {
     if (ordini.Count > 0)
     {
@@ -79,7 +80,7 @@ public class ManagerOrdini : MonoBehaviour
         if (ordini.Count > 0)
         {
             var ordine = ordini[0];
-            ordineText.text = $"Tipo: {ordine.PieceType}\nQuantità: {ordine.NumberOfPieces}";
+            ordineText.text = $"Pezzo: {ordine.PieceName}\nQuantità: {ordine.NumberOfPieces}";
         }
         else
         {

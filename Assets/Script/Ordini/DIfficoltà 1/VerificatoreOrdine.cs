@@ -4,9 +4,9 @@ public class VerificatoreOrdine : MonoBehaviour
 {
     public ManagerOrdini managerOrdini;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        ToyPiece toy = other.GetComponentInParent<ToyPiece>();
+        ToyPiece toy = other.GetComponent<ToyPiece>();
         if (toy == null) return;
 
         int punti = managerOrdini.VerificaOrdine(toy);  // Ora otteniamo il punteggio direttamente
