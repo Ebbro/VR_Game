@@ -11,6 +11,8 @@ public class ManagerOrdiniDif3 : MonoBehaviour
     public string[] basi = { "Orsacchiotto", "Polpo", "", ""};
     public int minQuantita = 1;
     public int maxQuantita = 2;
+    public GameManager gameManager;  // Assicurati di assegnarlo da Inspector
+    public float tempoBonusPerOrdine = 5f;  // Tempo da aggiungere per ordine corretto
 
     [System.Serializable]
     public class OrdineToyPiece
@@ -19,8 +21,9 @@ public class ManagerOrdiniDif3 : MonoBehaviour
         public int NumberOfPieces;
         public string PieceName;
 
-        public OrdineToyPiece(string pezzoSpecifico, int quantita)
+        public OrdineToyPiece(string basePezzo, string pezzoSpecifico, int quantita)
         {
+            PieceName = basePezzo;
             PieceTarget = pezzoSpecifico;
             NumberOfPieces = quantita;
         }
@@ -40,7 +43,7 @@ public class ManagerOrdiniDif3 : MonoBehaviour
         string pezzoSpecifico = pezziSpecifici[Random.Range(0, pezziSpecifici.Length)];
         int quantita = Random.Range(minQuantita, maxQuantita + 1);
 
-        OrdineToyPiece nuovoOrdine = new OrdineToyPiece(pezzoSpecifico, quantita);
+        OrdineToyPiece nuovoOrdine = new OrdineToyPiece(basePezzo, pezzoSpecifico, quantita);
         ordini.Add(nuovoOrdine);
 
         AggiornaTestoOrdine();
@@ -61,6 +64,10 @@ public class ManagerOrdiniDif3 : MonoBehaviour
 
     if (contienePezzoSpecifico && quantitaCorretta && contienePezzo)
     {
+        if (gameManager != null)
+        {
+            gameManager.AggiungiTempo(tempoBonusPerOrdine);
+        }
         return 15; // Punteggio per un ordine corretto
     }
 
