@@ -287,4 +287,4 @@ MonoBehaviour:
   Pieces: []
   ToyTypes: []
   voidlayer:
-    m_Bits: 0
+    m_Bits: 8388608

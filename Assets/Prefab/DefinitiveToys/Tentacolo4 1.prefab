@@ -254,7 +254,7 @@ MonoBehaviour:
   Pieces: []
   ToyTypes: []
   voidlayer:
-    m_Bits: 0
+    m_Bits: 8388608
 --- !u!65 &6185348942498764726
 BoxCollider:
   m_ObjectHideFlags: 0
