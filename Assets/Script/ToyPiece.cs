@@ -64,6 +64,7 @@ public class ToyPiece : MonoBehaviour
         {
             Debug.Log("Object enetered socket");
             GameObject piece = obj.interactableObject.transform.gameObject;
+            piece.tag = "ToyInSocket";
             Debug.Log(piece.name);
             AddPieceToList(piece);
             piece.GetComponent<ToyPiece>().DeactivateGrabInteractor();
