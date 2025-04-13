@@ -823,7 +823,7 @@ MonoBehaviour:
   Pieces: []
   ToyTypes: []
   voidlayer:
-    m_Bits: 0
+    m_Bits: 8388608
 --- !u!4 &5315649956543908973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7c859822fbca962428f7f270dc7ad8b3, type: 3}
