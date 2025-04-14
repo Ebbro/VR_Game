@@ -92,7 +92,7 @@ public class ManagerOrdini : MonoBehaviour
         if (ordini.Count > 0)
         {
             var ordine = ordini[0];
-            ordineText.text = $"Pezzo: {ordine.PieceName}\nQuantità: {ordine.NumberOfPieces}";
+            ordineText.text = $"Base: {ordine.PieceName}\nQuantità: {ordine.NumberOfPieces}";
         }
         else
         {
