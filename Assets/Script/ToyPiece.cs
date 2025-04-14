@@ -15,7 +15,7 @@ public class ToyPiece : MonoBehaviour
     [SerializeField] public bool IsBase = false;
 
     [SerializeField] public int NumberOfPieces = 1;
-    [SerializeField] private List<GameObject> Pieces = new List<GameObject>();
+    [SerializeField] public List<GameObject> Pieces = new List<GameObject>();
 
     
     [SerializeField] public List<string> ToyTypes = new List<string>();
@@ -65,6 +65,8 @@ public class ToyPiece : MonoBehaviour
             Debug.Log("Object enetered socket");
             GameObject piece = obj.interactableObject.transform.gameObject;
             piece.tag = "ToyInSocket";
+            GameObject OutlineManager = GameObject.FindGameObjectWithTag("Outline");
+            OutlineManager.GetComponent<AddOutline>().DeactivateOutline(piece);
             Debug.Log(piece.name);
             AddPieceToList(piece);
             piece.GetComponent<ToyPiece>().DeactivateGrabInteractor();
