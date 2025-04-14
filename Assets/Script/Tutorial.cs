@@ -12,6 +12,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private GameObject CannonOn;
     [SerializeField] private GameObject PunteggioOn;
     [SerializeField] private bool IsStart= false;
+    [SerializeField] private bool RoomLight = false;
 
 
 
@@ -19,7 +20,12 @@ public class Tutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")CheckToDo();
+        Debug.Log("TriggerEnter");
+        if (other.gameObject.tag == "MainCamera")
+        {
+            CheckToDo();
+            Debug.Log("Player Entered Trigger");
+        }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,9 +47,12 @@ public class Tutorial : MonoBehaviour
         }
         if (CannonOn != null)
         {
-            TurnOffLights(CannonOn);
+            TurnOnLights(CannonOn);
         }
-
+        if (RoomLight)
+        {
+            RenderSettings.ambientLight = LightColor;
+        }
 
     }
 
@@ -57,6 +66,7 @@ public class Tutorial : MonoBehaviour
 
     private void TurnOnLights(GameObject Light)
     {
+        Debug.Log("TurningOnLights");
         Light.SetActive(true);
     }
 
