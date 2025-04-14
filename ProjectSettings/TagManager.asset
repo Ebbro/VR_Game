@@ -11,6 +11,7 @@ TagManager:
   - InteractionManager
   - Attachable
   - ManagerOrdini
+  - Outline
   layers:
   - Default
   - TransparentFX

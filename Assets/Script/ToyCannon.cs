@@ -12,7 +12,9 @@ public class ToyCannon : MonoBehaviour
 
     [SerializeField] public float Force = 100.0f;
     [SerializeField] public List<GameObject> ToyPieces = new List<GameObject>();
-    
+    [SerializeField] private AudioSource Fire;
+
+
 
 
     private void SwitchActivate(){
@@ -47,6 +49,8 @@ public class ToyCannon : MonoBehaviour
         Piece.GetComponent<Rigidbody>().AddForce(this.transform.GetChild(0).transform.forward * Force, ForceMode.Impulse);
         Piece.transform.parent = null;
         Debug.Log("Toy piece launching");
+
+        Fire.Play();
 
     }
 

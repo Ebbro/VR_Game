@@ -16,6 +16,7 @@ public class ToyPiece : MonoBehaviour
 
     [SerializeField] public int NumberOfPieces = 1;
     [SerializeField] public List<GameObject> Pieces = new List<GameObject>();
+    [SerializeField] private AudioSource SocketedItemSound;
 
     
     [SerializeField] public List<string> ToyTypes = new List<string>();
@@ -70,6 +71,7 @@ public class ToyPiece : MonoBehaviour
             Debug.Log(piece.name);
             AddPieceToList(piece);
             piece.GetComponent<ToyPiece>().DeactivateGrabInteractor();
+            SocketedItemSound.Play();
         }
     }
 
