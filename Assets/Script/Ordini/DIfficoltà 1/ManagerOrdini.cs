@@ -15,7 +15,7 @@ public class ManagerOrdini : MonoBehaviour
     public int minQuantita = 1;
     public int maxQuantita = 2;
     public GameManager gameManager;  // Assicurati di assegnarlo da Inspector
-    public float tempoBonusPerOrdine = 5f;  // Tempo da aggiungere per ordine corretto
+    public float tempoBonusPerOrdine = 15f;  // Tempo da aggiungere per ordine corretto
 
     [System.Serializable]
     public class OrdineToyPiece

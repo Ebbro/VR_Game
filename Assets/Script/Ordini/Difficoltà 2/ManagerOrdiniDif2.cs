@@ -12,7 +12,7 @@ public class ManagerOrdiniDif2 : MonoBehaviour
     public int minQuantita = 1;
     public int maxQuantita = 2;
     public GameManager gameManager;  // Assicurati di assegnarlo da Inspector
-    public float tempoBonusPerOrdine = 5f;  // Tempo da aggiungere per ordine corretto
+    public float tempoBonusPerOrdine = 25f;  // Tempo da aggiungere per ordine corretto
 
     [System.Serializable]
     public class OrdineToyPiece
@@ -68,7 +68,7 @@ public class ManagerOrdiniDif2 : MonoBehaviour
         {
             gameManager.AggiungiTempo(tempoBonusPerOrdine);
         }
-        return 15; // Punteggio per un ordine corretto
+        return 30; // Punteggio per un ordine corretto
     }
 
     return 0; // Nessun punteggio per un ordine sbagliato
