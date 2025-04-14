@@ -1,0 +1,230 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &186373125448199749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730985809123649670}
+  - component: {fileID: 3144046940374848511}
+  m_Layer: 0
+  m_Name: ManagerOrdiniDif3
+  m_TagString: ManagerOrdini
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1730985809123649670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186373125448199749}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4611704, y: 1.6668967, z: 6.939022}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3075366926971929387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3144046940374848511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186373125448199749}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7d2bc523d855d419036e32f80eab9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ordini: []
+  ordineText: {fileID: 0}
+  pezziSpecifici:
+  - Coda Dinosauro
+  - Gamba Dx Dinosauro
+  - Gamba Sx Dinosauro
+  - Testa Dinosauro
+  - Tentacolo Polpo
+  - Testa Orsacchiotto
+  - Gamba Dx Orsacchiotto
+  - Gamba Sx Orsacchiotto
+  - Braccio Sx Orsacchiotto
+  - Braccio Dx Orsacchiotto
+  basi:
+  - Base Orsacchiotto
+  - Base Polpo
+  - Base Dinosauro
+  minQuantita: 2
+  maxQuantita: 5
+  gameManager: {fileID: 0}
+  tempoBonusPerOrdine: 5
+--- !u!1 &1237627690562882060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3075366926971929387}
+  - component: {fileID: 7098134857794826813}
+  m_Layer: 0
+  m_Name: GestioneManagerOrdini
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3075366926971929387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237627690562882060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06894018, y: 1.6247057, z: -1.023615}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4332486549747758188}
+  - {fileID: 7260930442729631044}
+  - {fileID: 1730985809123649670}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7098134857794826813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237627690562882060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba974f9c2cea454e8efd67822c7dff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBetweenStarts: 30
+--- !u!1 &6674436704119041853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7260930442729631044}
+  - component: {fileID: 6854671555383313000}
+  m_Layer: 0
+  m_Name: ManagerOrdiniDif2
+  m_TagString: ManagerOrdini
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7260930442729631044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6674436704119041853}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4611704, y: 1.6668967, z: 6.939022}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3075366926971929387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6854671555383313000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6674436704119041853}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89654b63f157b834e96d39db9c6d9394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ordini: []
+  ordineText: {fileID: 0}
+  basiPossibili:
+  - Base Orsacchiotto
+  - Base Polpo
+  - Base Dinosauro
+  tipiPossibili:
+  - Orsacchiotto
+  - Polpo
+  - Dinosauro
+  minQuantita: 2
+  maxQuantita: 3
+  gameManager: {fileID: 0}
+  tempoBonusPerOrdine: 5
+--- !u!1 &7740184215205859861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4332486549747758188}
+  - component: {fileID: 4706171415753171249}
+  m_Layer: 0
+  m_Name: ManagerOrdini
+  m_TagString: ManagerOrdini
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4332486549747758188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7740184215205859861}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4611704, y: 1.6668967, z: 6.939022}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3075366926971929387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4706171415753171249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7740184215205859861}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae5d265c3ba22a4d9a04b17c6ed9799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ordini: []
+  ordineText: {fileID: 0}
+  audioSource: {fileID: 0}
+  ordineCorrettoClip: {fileID: 8300000, guid: 42b838a3e75b25140a6d32a0e6fd697d, type: 3}
+  ordineSbagliatoClip: {fileID: 8300000, guid: 69e93791dab152f4bbebcb78b52a6bde, type: 3}
+  pezziPossibili:
+  - Base Orsacchiotto
+  - Base Polpo
+  - Base Dinosauro
+  minQuantita: 2
+  maxQuantita: 2
+  gameManager: {fileID: 0}
+  tempoBonusPerOrdine: 5
