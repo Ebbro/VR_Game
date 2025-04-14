@@ -34,19 +34,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f999e325255a81f41a86eae8e9155077, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.47581053
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f999e325255a81f41a86eae8e9155077, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.19187401
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f999e325255a81f41a86eae8e9155077, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8284242
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f999e325255a81f41a86eae8e9155077, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.22472662
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f999e325255a81f41a86eae8e9155077, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -160,10 +160,34 @@ MonoBehaviour:
       m_Calls: []
   m_HoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6227223881572599666, guid: 4e6c5cc3d7b69734a95da6ee4479fac5, type: 3}
+        m_TargetAssemblyTypeName: AddOutline, Assembly-CSharp
+        m_MethodName: EnableOutline
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6227223881572599666, guid: 4e6c5cc3d7b69734a95da6ee4479fac5, type: 3}
+        m_TargetAssemblyTypeName: AddOutline, Assembly-CSharp
+        m_MethodName: DisableOutline
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstSelectEntered:
     m_PersistentCalls:
       m_Calls: []
