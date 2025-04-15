@@ -6,7 +6,8 @@ public class ManagerOrdini : MonoBehaviour
 {
     public List<OrdineToyPiece> ordini = new List<OrdineToyPiece>();
     public TextMeshProUGUI ordineText;
-    public AudioSource audioSource;  // Riferimento all'AudioSource
+    public AudioSource corretto;  // Riferimento all'AudioSource
+    public AudioSource errore;  // Riferimento all'AudioSource
 
 
      public string[] pezziPossibili = { "Orsacchiotto", "Polpo", "", ""};
@@ -44,7 +45,7 @@ public class ManagerOrdini : MonoBehaviour
 
         OrdineToyPiece nuovoOrdine = new OrdineToyPiece(pezzo, quantita);
         ordini.Add(nuovoOrdine);
-        audioSource.Play();
+        
         AggiornaTestoOrdine();
     }
 
@@ -65,10 +66,11 @@ public class ManagerOrdini : MonoBehaviour
         {
             gameManager.AggiungiTempo(tempoBonusPerOrdine);
         }
+       corretto.Play();
         return 15; // Punteggio per un ordine corretto
 
     }
-
+errore.Play();
     return 0; // Nessun punteggio per un ordine sbagliato
 
 }
