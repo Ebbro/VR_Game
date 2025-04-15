@@ -1922,7 +1922,7 @@ PrefabInstance:
     - target: {fileID: 4706171415753171249, guid: 62272932e5dc5344cab6f0d4121d6af9, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 152425850}
+      objectReference: {fileID: 522669956}
     - target: {fileID: 4706171415753171249, guid: 62272932e5dc5344cab6f0d4121d6af9, type: 3}
       propertyPath: gameManager
       value: 
@@ -2924,11 +2924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1429088796730465021, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.279
+      value: 0.287
       objectReference: {fileID: 0}
     - target: {fileID: 1429088796730465021, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.008
+      value: -0.009
       objectReference: {fileID: 0}
     - target: {fileID: 1528580210785895538, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_LocalScale.x
@@ -3537,11 +3537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1429088796730465021, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.281
+      value: 0.292
       objectReference: {fileID: 0}
     - target: {fileID: 1429088796730465021, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.004
+      value: -0.019
       objectReference: {fileID: 0}
     - target: {fileID: 1528580210785895538, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_LocalScale.x
@@ -6082,11 +6082,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1429088796730465021, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.278
+      value: 0.288
       objectReference: {fileID: 0}
     - target: {fileID: 1429088796730465021, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.009
+      value: -0.013
       objectReference: {fileID: 0}
     - target: {fileID: 1528580210785895538, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_LocalScale.x
