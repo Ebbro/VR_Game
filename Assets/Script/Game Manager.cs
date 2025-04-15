@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
     private void AggiornaTestoPunteggio()
     {
-        punteggioText.text = $"Punteggio: {punteggio}";
+        punteggioText.text = $"Stipendio: {punteggio}";
     }
 
     public void AggiungiTempo(float tempoDaAggiungere)
