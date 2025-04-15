@@ -7,8 +7,6 @@ public class ManagerOrdini : MonoBehaviour
     public List<OrdineToyPiece> ordini = new List<OrdineToyPiece>();
     public TextMeshProUGUI ordineText;
     public AudioSource audioSource;  // Riferimento all'AudioSource
-    public AudioClip ordineCorrettoClip;  // Suono per ordine corretto
-    public AudioClip ordineSbagliatoClip; // Suono per ordine sbagliato
 
 
      public string[] pezziPossibili = { "Orsacchiotto", "Polpo", "", ""};
@@ -46,7 +44,7 @@ public class ManagerOrdini : MonoBehaviour
 
         OrdineToyPiece nuovoOrdine = new OrdineToyPiece(pezzo, quantita);
         ordini.Add(nuovoOrdine);
-
+        audioSource.Play();
         AggiornaTestoOrdine();
     }
 
@@ -92,7 +90,7 @@ public class ManagerOrdini : MonoBehaviour
         if (ordini.Count > 0)
         {
             var ordine = ordini[0];
-            ordineText.text = $"Base: {ordine.PieceName}\nQuantità: {ordine.NumberOfPieces}";
+            ordineText.text = $"{ordine.PieceName}\n+ {ordine.NumberOfPieces - 1} Pezzi";
         }
         else
         {

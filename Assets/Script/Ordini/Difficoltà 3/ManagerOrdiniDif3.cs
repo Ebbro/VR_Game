@@ -91,7 +91,7 @@ public class ManagerOrdiniDif3 : MonoBehaviour
         if (ordini.Count > 0)
         {
             var ordine = ordini[0];
-            ordineText.text = $"Base:{ordine.PieceName}\nPezzo: {ordine.PieceTarget}\nQuantità: {ordine.NumberOfPieces}";
+            ordineText.text = $"{ordine.PieceName}\n+ {ordine.PieceTarget}\n+ {ordine.NumberOfPieces - 1} Pezzi";
         }
         else
         {
