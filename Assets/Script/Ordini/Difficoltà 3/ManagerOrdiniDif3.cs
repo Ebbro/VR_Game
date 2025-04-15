@@ -13,6 +13,8 @@ public class ManagerOrdiniDif3 : MonoBehaviour
     public int maxQuantita = 2;
     public GameManager gameManager;  // Assicurati di assegnarlo da Inspector
     public float tempoBonusPerOrdine = 30f;  // Tempo da aggiungere per ordine corretto
+public AudioSource corretto;  // Riferimento all'AudioSource
+    public AudioSource errore;  // Riferimento all'AudioSource
 
     [System.Serializable]
     public class OrdineToyPiece
@@ -68,9 +70,10 @@ public class ManagerOrdiniDif3 : MonoBehaviour
         {
             gameManager.AggiungiTempo(tempoBonusPerOrdine);
         }
+        corretto.Play();
         return 45; // Punteggio per un ordine corretto
     }
-
+errore.Play();
     return 0; // Nessun punteggio per un ordine sbagliato
 }
 
