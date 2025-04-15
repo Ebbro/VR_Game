@@ -12,6 +12,7 @@ TagManager:
   - Attachable
   - ManagerOrdini
   - Outline
+  - ToyInSocket
   layers:
   - Default
   - TransparentFX
