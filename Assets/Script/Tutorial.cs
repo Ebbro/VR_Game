@@ -11,6 +11,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private GameObject SchermiOn;
     [SerializeField] private GameObject CannonOn;
     [SerializeField] private GameObject PunteggioOn;
+    [SerializeField] private GameObject UI;
     [SerializeField] private bool IsStart= false;
     [SerializeField] private bool RoomLight = false;
 
@@ -61,6 +62,16 @@ public class Tutorial : MonoBehaviour
     {
         RenderSettings.ambientLight = LightColor;
     }
+     if (PunteggioOn != null)
+        {
+            Debug.Log("Attivo Schermi al primo trigger");
+            PunteggioOn.SetActive(true);
+        }
+        if (UI != null)
+        {
+            Debug.Log("Attivo Schermi al primo trigger");
+            UI.SetActive(true);
+        }
 }
 
 
