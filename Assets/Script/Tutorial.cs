@@ -17,7 +17,6 @@ public class Tutorial : MonoBehaviour
 
 
 
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("TriggerEnter");
@@ -31,30 +30,39 @@ public class Tutorial : MonoBehaviour
     void Start()
     {
         if (IsStart) StartCoroutine(ExampleCoroutine());
+        
         //Start the coroutine we define below named ExampleCoroutine.
 
     }
 
     private void CheckToDo()
-    {
-        if (LightOn != null)
+{
+
+        // Attiva solo al primo trigger
+        if (SchermiOn != null)
         {
-            TurnOnLights(LightOn);
-        }
-        if (LightOff != null)
-        {
-            TurnOffLights(LightOff);
-        }
-        if (CannonOn != null)
-        {
-            TurnOnLights(CannonOn);
-        }
-        if (RoomLight)
-        {
-            RenderSettings.ambientLight = LightColor;
+            Debug.Log("Attivo Schermi al primo trigger");
+            SchermiOn.SetActive(true);
         }
 
+    if (LightOn != null)
+    {
+        TurnOnLights(LightOn);
     }
+    if (LightOff != null)
+    {
+        TurnOffLights(LightOff);
+    }
+    if (CannonOn != null)
+    {
+        TurnOnLights(CannonOn);
+    }
+    if (RoomLight)
+    {
+        RenderSettings.ambientLight = LightColor;
+    }
+}
+
 
     IEnumerator ExampleCoroutine()
     {
@@ -85,6 +93,7 @@ public class Tutorial : MonoBehaviour
     {
         
     }
+    
 
 
     

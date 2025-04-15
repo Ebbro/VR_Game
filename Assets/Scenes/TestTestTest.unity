@@ -869,7 +869,7 @@ MonoBehaviour:
   LightOn: {fileID: 1285699791}
   LightOff: {fileID: 1469608301}
   LightColor: {r: 0, g: 0, b: 0, a: 0}
-  SchermiOn: {fileID: 0}
+  SchermiOn: {fileID: 754016349}
   CannonOn: {fileID: 0}
   PunteggioOn: {fileID: 0}
   IsStart: 0
@@ -2619,11 +2619,11 @@ PrefabInstance:
     - target: {fileID: 1186636881543617843, guid: 7769cdcafef24b443b0e28a8d675ae98, type: 3}
       propertyPath: timerText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1861162664}
     - target: {fileID: 1186636881543617843, guid: 7769cdcafef24b443b0e28a8d675ae98, type: 3}
       propertyPath: punteggioText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1602642766}
     - target: {fileID: 2154049829400807844, guid: 7769cdcafef24b443b0e28a8d675ae98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8057267
@@ -5929,7 +5929,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tabella
+  m_Text: 'Tempo:'
 --- !u!222 &1861162665
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5957,11 +5957,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1429088796730465021, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.273
+      value: 0.278
       objectReference: {fileID: 0}
     - target: {fileID: 1429088796730465021, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.02
+      value: 0.009
       objectReference: {fileID: 0}
     - target: {fileID: 1528580210785895538, guid: b99e4fd7311b86647ba7d8ef26f04f3c, type: 3}
       propertyPath: m_LocalScale.x

@@ -68,11 +68,11 @@ public class ManagerOrdini : MonoBehaviour
             gameManager.AggiungiTempo(tempoBonusPerOrdine);
         }
         return 15; // Punteggio per un ordine corretto
-         audioSource.PlayOneShot(ordineSbagliatoClip);
+
     }
 
     return 0; // Nessun punteggio per un ordine sbagliato
-                audioSource.PlayOneShot(ordineCorrettoClip);
+
 }
 
     public void CompletaOrdine()
