@@ -67,7 +67,7 @@ public class ManagerOrdini : MonoBehaviour
             gameManager.AggiungiTempo(tempoBonusPerOrdine);
         }
        corretto.Play();
-        return 15; // Punteggio per un ordine corretto
+        return 5; // Punteggio per un ordine corretto
 
     }
 errore.Play();
