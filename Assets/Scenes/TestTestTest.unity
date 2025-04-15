@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -5109,7 +5109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5901,7 +5901,7 @@ MonoBehaviour:
   LightOff: {fileID: 124072922}
   LightColor: {r: 0, g: 0, b: 0, a: 0}
   SchermiOn: {fileID: 0}
-  CannonOn: {fileID: 0}
+  CannonOn: {fileID: 8959804261339244180}
   PunteggioOn: {fileID: 0}
   UI: {fileID: 0}
   IsStart: 0
@@ -6623,6 +6623,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1409738469}
   m_SourcePrefab: {fileID: 100100000, guid: 42318b456e88bb648948a1b25e1f9d1c, type: 3}
+--- !u!1 &8959804261339244180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6719040931686368047, guid: 42318b456e88bb648948a1b25e1f9d1c, type: 3}
+  m_PrefabInstance: {fileID: 8959804261339244179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
