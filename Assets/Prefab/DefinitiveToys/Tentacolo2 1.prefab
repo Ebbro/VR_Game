@@ -22,19 +22,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21c30414b664e4d44aaf85789e74511c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.15671082
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21c30414b664e4d44aaf85789e74511c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.17283204
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21c30414b664e4d44aaf85789e74511c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.61262906
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21c30414b664e4d44aaf85789e74511c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7551533
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 21c30414b664e4d44aaf85789e74511c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -276,6 +276,7 @@ MonoBehaviour:
   IsBase: 0
   NumberOfPieces: 1
   Pieces: []
+  SocketedItemSound: {fileID: 0}
   ToyTypes: []
   voidlayer:
     m_Bits: 8388608
